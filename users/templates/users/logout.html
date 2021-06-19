@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Registrering</title>
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'x_app/images/norge.png' %}" />
+        <link rel="stylesheet" href="{% static 'x_app/styles.css' %}" />
+    </head>
+    <body style="background-color: white">
+
+        <header>
+            <!--<h1 style="color:rebeccapurple">Språkkurs</h1>
+            static/fonts/NixieOne-Regular.ttf-->
+            <nav>
+ 
+            </nav>
+        </header>
+        <img src="{% static 'x_app/images/utsikt-ny.png' %}" width=100%>
+        <hr>
+
+        <div class="container">
+
+            <div class="d1"></div>
+            <div class="d2"></div>
+            <div class="d3"></div>
+            <div class="d4">
+                <main>
+                    <img src="{% static 'x_app/images/logo.jpg' %}" width=100%>
+                    <h2><i>Du er nå logget ut </i>Sie sind jetzt ausgeloggt</h2>
+                    <div class="border-top pt-3">
+                        <small class="text-muted">
+                            <a href="{% url 'login' %}"><i>Logg inn igjen </i>Wieder einloggen</a>
+                        </small>
+                    </div>
+    
+                <footer>
+                    <img src="{% static 'x_app/images/maritindan.png' %}" width=100%>
+                </footer>
+            </div>
+            <div class="d3"></div>
+            <div class="d2"></div>
+            <div class="d1"></div>
+        </div>
+
+        
+
+        
+        
+    </body>
+</html>
