@@ -1,0 +1,418 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bestilling</title>
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'x_app/images/norge.png' %}" />
+        <link rel="stylesheet" href="{% static 'x_app/styles.css' %}" />
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body style="background-color: white">
+
+        <header>
+            <!--<h1 style="color:rebeccapurple">Språkkurs</h1>-->
+            <nav>
+
+            </nav>
+        </header>
+        <img src="{% static 'x_app/images/utsikt-ny.png' %}" width=100%>
+        <hr>
+
+        <div class="container">
+
+            <div class="d1"></div>
+            <div class="d2"></div>
+            <div class="d3"></div>
+            <div class="d4">
+                <main>
+                    <img src="{% static 'x_app/images/logo.jpg' %}" width=100%>
+    
+                    <article>
+                        <section>
+                                <div>
+                                    <form action="{% url 'results' %}" method="POST">
+                                    {% csrf_token %}
+                                    <h1>Art des Treffens</h1>
+                                    <div id="vanlightml">
+                                        <label for="vanlig">Vor Ort beim Kunden</label>
+                                        <input type="radio" name="møtemåte" id="vanlig" value="Vor Ort" required>
+                                        <p id="vanliginsert"></p>
+                                    </div>
+                                    <div id="digitalthtml">
+                                        <label for="digitalt">Digital</label>
+                                        <input type="radio" name="møtemåte" id="digitalt" value="Digital" required>
+                                        <p id="digitaltinsert"></p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="læremåte"><h1>Wie lernst du am besten?</h1></label>
+                                    <textarea id="læremåte" name="læremåte"></textarea>
+                                </div>
+                                <div>
+                                    <label for="kunnskapsnivå"><h1>Kenntnisstand:</h1></label>
+                                    <textarea id="kunnskapsnivå" name="kunnskapsnivå"></textarea>
+                                </div>
+                                
+                                <!--<button type="submit">Submit</button>-->
+                                    <select hidden name="day_humanized" id="day_humanized">
+                                        <option hidden value="{{ day_humanized }}">{{ day_humanized }}</option>
+                                    </select>
+                                    <select hidden name="hour_start_humanized" id="hour_start_humanized">
+                                        <option hidden value="{{ hour_start_humanized }}">{{ hour_start_humanized }}</option>
+                                    </select>
+                                    <select hidden name="hour_end_humanized" id="hour_end_humanized">
+                                        <option hidden value="{{ hour_end_humanized }}">{{ hour_end_humanized }}</option>
+                                    </select>
+                                    <select hidden name="dauer_h_humanized" id="dauer_h_humanized">
+                                        <option hidden value="{{ dauer_h_humanized }}">{{ dauer_h_humanized }}</option>
+                                    </select>
+                                    <select hidden name="unt_preis_humanized" id="unt_preis_humanized">
+                                        <option hidden value="{{ unt_preis_humanized }}">{{ unt_preis_humanized }}</option>
+                                    </select>
+                                    <select hidden name="gesamtpreis_humanized" id="gesamtpreis_humanized">
+                                        <option hidden id="gesamt" value="1">gesamtpreis_humanized</option>
+                                    </select>
+                                    <select hidden name="friggin_old_date" id="friggin_old_date">
+                                        <option hidden value="{{ friggin_old_date }}">{{ friggin_old_date }}</option>
+                                    </select>
+                                    <select hidden name="final_red_array" id="final_red_array">
+                                        <option hidden value="{{ final_red_array }}">{{ final_red_array }}</option>
+                                    </select>
+                                    <select hidden name="kunde_adr_1_id" id="kunde_adr_1_id">
+                                        <option hidden id="kunde_adr_1" value="">kunde_adr_1</option>
+                                    </select>
+                                    <select hidden name="kunde_adr_2_id" id="kunde_adr_2_id">
+                                        <option hidden id="kunde_adr_2" value="">kunde_adr_2</option>
+                                    </select>
+                                    </br><button type="submit">Submit</button>
+                                    <p id="gesamtpreis"></p>
+                            </form>
+                        </section>
+                    </article>
+
+                    </p>
+                    <a href="/">Back to Calendar</a>
+                </main>
+    
+                <footer>
+                    <img src="{% static 'x_app/images/maritindan.png' %}" width=100%>
+                </footer>
+            </div>
+            <div class="d3"></div>
+            <div class="d2"></div>
+            <div class="d1"></div>
+        </div>
+
+        
+
+        
+        
+    </body>
+<script>
+    /*const resultslist = document.getElementById('previous_data');
+    new URLSearchParams(window.location.search).forEach((value, name) =>{
+        console.log(`${name}: ${value}`)
+        resultsList.append(`${name}: ${value}`);
+        resultsList.append(document.createElement('br'));
+    })*/
+    // Discriminate based upon choice of type of meeting
+    /*
+    if (typeof(vanligcounter) === 'undefined'){
+        var vanligcounter = 0;
+    }
+    if (typeof(digitaltcounter) === 'undefined'){
+        var digitaltcounter = 0;
+    }
+
+    if (vanligcounter === 0){
+        var triggeredvanlig = document.getElementById('vanlig');
+        vanligcounter = 1;
+        triggeredvanlig.addEventListener('click', function(){
+            document.getElementById("vanlightml").insertAdjacentHTML("afterend", "<p>Hello World</p>");
+        });
+    }
+
+    if (digitaltcounter === 0){
+        var triggereddigitalt = document.getElementById('digitalt');
+        digitaltcounter = 1;
+        triggereddigitalt.addEventListener('click', function(){
+            document.getElementById("digitalthtml").insertAdjacentHTML("afterend", "<p>Hello World</p>");
+        });
+    }
+    */
+
+
+    const usp = new URLSearchParams();
+    usp.set('selbsttest', '0.00')
+    untPreisForJavaScript = document.getElementById('unt_preis_humanized').value.split(" ")[0];
+    console.log(untPreisForJavaScript);
+    document.getElementById('gesamtpreis').innerHTML = `Gesamt: ` + untPreisForJavaScript;
+    document.getElementById('gesamt').value = String(untPreisForJavaScript.replace(/,/g, '.'));
+
+    var vanlig = (function() {
+        return function() {
+            const pVanlig = document.querySelector('#vanliginsert');
+            const pDigitalt = document.querySelector('#digitaltinsert');
+            
+            document.getElementById('vanlig').addEventListener('click', function() {
+                pVanlig.innerText = '';
+                pDigitalt.innerText = '';
+                pDigitalt.innerHTML = `
+                                    <p>
+                                        <h1>Die Anfahrt ist kostenlos bei einer Entfernung des Wohnortes von bis zu 15 km Luftlinie vom Münchner Marienplatz. Darüber hinaus 1€ pro km ab dem 16. Kilometer.</h1>
+                                    </p>
+                                    <img src="{% static 'x_app/images/radius_muc.png' %}" width=450px>
+                                    <div>
+                                    <label for="addresse"><h1>Adresse</h1></label>
+                                    <textarea id="addresse-ny" name="addresse-ny" placeholder="Str. & Hausnr.&#10;PLZ Ort" required></textarea>
+                                    <p id="geocodeinsert"></p>
+                                    </div>
+                                    <div>
+                                    <p><h1>Soll ich Maske tragen / bzw. einen Selbsttest machen?</h1></p>
+                                    <div id="ffp1">
+                                        <label for="ffp1">OP-Maske (0,50 €)</label>
+                                        <input type="radio" name="munnbind" id="ffp1" value="OP-Maske" required>
+                                    </div>
+                                    <div id="ffp2">
+                                        <label for="ffp2">FFP2-Maske (1,50 €)</label>
+                                        <input type="radio" name="munnbind" id="ffp2" value="FFP2-Maske" required>
+                                    </div>
+                                    <div id="ingenmunnbind">
+                                        <label for="ingenmunnbind">Keine Maske</label>
+                                        <input type="radio" name="munnbind" id="ingenmunnbind" value="Keine Maske" required>
+                                    </div>
+                                    </div>
+                                    <p><div id="selbsttest">
+                                        <label for="selbsttest">Selbsttest (5,00
+                                            €, optional)</label>
+                                        <input type="checkbox" name="selbsttest" id="Selbsttest" value="Ja">
+                                    </div></p>`;
+                //document.getElementById("vanlightml").insertAdjacentHTML("afterend", "<p>Hello World</p>");
+                geocode();
+                
+            });
+            
+        };
+    })();
+
+    
+    var digitalt = (function() {
+        return function() {
+            const pVanlig = document.querySelector('#vanliginsert');
+            const pDigitalt = document.querySelector('#digitaltinsert');
+            
+            document.getElementById('digitalt').addEventListener('click', function() {
+                pVanlig.innerText = '';
+                pDigitalt.innerText = '';
+                pDigitalt.innerHTML = `<div>
+                                        <label for="videocall"><h1>Welchen Videocallanbieter willst du benutzen?</h1></label>
+                                        <textarea id="videocall" name="videocall"></textarea>
+                                        </div>`
+            });
+            
+        };
+    })();
+
+    
+    var geocode = (function() {
+        return function() {
+
+            const pGeocode = document.getElementById('geocodeinsert');
+
+            var geoCodeEvent = document.getElementById('addresse-ny');
+            var ffp1Event = document.getElementById('ffp1');
+            var ffp2Event = document.getElementById('ffp2');
+            var selbsttestEvent = document.getElementById('selbsttest');
+            var ingenMunnbindEvent = document.getElementById('ingenmunnbind');
+
+            if (ffp1Event){
+                ffp1Event.addEventListener("change", function() {
+                    usp.set('maske', '0.50');
+                    var subtotal = Number(untPreisForJavaScript.replace(/,/g, '.'));
+                    for(var key of usp.keys()) {
+                        subtotal += Number(usp.get(key));
+                    }
+                    document.getElementById('gesamtpreis').innerHTML = `Gesamt: ${sub = String(subtotal).replace(/\./g, ',')} €`;
+                    document.getElementById('gesamt').value = String(subtotal);
+                })
+            }
+
+            if (ffp2Event){
+                ffp2Event.addEventListener("change", function() {
+                    usp.set('maske', '1.50');
+                    var subtotal = Number(untPreisForJavaScript.replace(/,/g, '.'));;
+                    for(var key of usp.keys()) {
+                        subtotal += Number(usp.get(key));
+                    }
+                    document.getElementById('gesamtpreis').innerHTML = `Gesamt: ${sub = String(subtotal).replace(/\./g, ',')} €`;
+                    document.getElementById('gesamt').value = String(subtotal);
+                });
+            }
+
+            if (selbsttestEvent){
+                selbsttestEvent.addEventListener("change", function() {
+                    if (usp.get('selbsttest') === '0.00'){
+                        usp.set('selbsttest', '5.00');
+                        var subtotal = Number(untPreisForJavaScript.replace(/,/g, '.'));;
+                        for(var key of usp.keys()) {
+                            subtotal += Number(usp.get(key));
+                        }
+                        document.getElementById('gesamtpreis').innerHTML = `Gesamt: ${sub = String(subtotal).replace(/\./g, ',')} €`;
+                        document.getElementById('gesamt').value = String(subtotal);
+                    }
+
+                    else {
+                        usp.set('selbsttest', '0.00');
+                        var subtotal = Number(untPreisForJavaScript.replace(/,/g, '.'));;
+                        for(var key of usp.keys()) {
+                            subtotal += Number(usp.get(key));
+                        }
+                        document.getElementById('gesamtpreis').innerHTML = `Gesamt: ${sub = String(subtotal).replace(/\./g, ',')} €`;
+                        document.getElementById('gesamt').value = String(subtotal);
+                    }
+                });
+            }
+
+            if (ingenMunnbindEvent){
+                ingenMunnbindEvent.addEventListener("change", function() {
+                    usp.set('maske', '0.00');
+                    var subtotal = Number(untPreisForJavaScript.replace(/,/g, '.'));;
+                    for(var key of usp.keys()) {
+                        subtotal += Number(usp.get(key));
+                    }
+                    document.getElementById('gesamtpreis').innerHTML = `Gesamt: ${sub = String(subtotal).replace(/\./g, ',')} €`;
+                    document.getElementById('gesamt').value = String(subtotal);
+                });
+            }
+
+            if (geoCodeEvent){
+                geoCodeEvent.addEventListener("change", function() {
+                    var location = document.getElementById('addresse-ny').value;
+
+                    axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
+                        params:{
+                            address: location,
+                            key: 'AIzaSyDRDPqcdr7zXD7gHonKuODSCiWSgZ59xjc'
+                        }
+                    })
+                    .then(function(response){
+                        // Geometry
+                        var lat = response.data.results[0].geometry.location.lat;
+                        var lng = response.data.results[0].geometry.location.lng;
+
+                        var dist = 6373.3*Math.acos(Math.cos(0.84015)*Math.cos(lat/180*Math.PI)*Math.cos(0.20203 - lng/180*Math.PI) + Math.sin(0.84015)*Math.sin(lat/180*Math.PI));
+                        dist = Math.round(dist*100) / 100
+
+                        aufpreis = dist - 15.00
+                        aufpreis = Math.round(aufpreis*100)/100
+
+                        //console.log(response.data.results[0].address_components)
+
+                        var len = response.data.results[0].address_components.length
+
+                        if (response.data.results[0].address_components[2]["types"][0] === "locality"){
+                            var locality = response.data.results[0].address_components[2]["long_name"];
+                        }
+
+                        else if (response.data.results[0].address_components[3]["types"][0] === "locality"){
+                            var locality = response.data.results[0].address_components[3]["long_name"];
+                        }
+
+                        else if (response.data.results[0].address_components[2]["types"][0] === "postal_town"){
+                            var locality = response.data.results[0].address_components[2]["long_name"];
+                        }
+
+                        else if (response.data.results[0].address_components[3]["types"][0] === "postal_town"){
+                            var locality = response.data.results[0].address_components[3]["long_name"];
+                        }
+
+                        if (response.data.results[0].address_components[0]["types"][0] !== "street_number"){
+                            pGeocode.innerHTML = `<div>
+                                                Bitte geben Sie Ihre vollständige Adresse an.
+                                                </div>`
+                            usp.set('distance', '0.00');
+                            var subtotal = Number(untPreisForJavaScript.replace(/,/g, '.'));;
+                            for(var key of usp.keys()) {
+                                subtotal += Number(usp.get(key));
+                            }
+                            document.getElementById('gesamtpreis').innerHTML = `Gesamt: ${sub = String(subtotal).replace(/\./g, ',')} €`;
+                            document.getElementById('gesamt').value = String(subtotal);
+                        }
+
+                        else if (response.data.results[0].address_components[response.data.results[0].address_components.length - 2]["short_name"] !== "DE"){
+                            pGeocode.innerHTML = `<p>
+                                                Ihre Adresse
+                                                <div id="route-hausnr">${response.data.results[0].address_components[1]["long_name"]} ${response.data.results[0].address_components[0]["long_name"]}</div>
+                                                <div id="post-locality">${response.data.results[0].address_components[len - 1]["long_name"]} ${locality}</div>
+                                                <div id="country-code">${response.data.results[0].address_components[len - 2]["short_name"]}</div>
+                                                <p>liegt nicht in Deutschland. Bitte kontaktieren Sie mich persönlich unter ja@julian-angres.no zur Überprüfung der Reiserestriktionen.</p>
+                                                </p>`;
+                            usp.set('distance', '0.00');
+                            var subtotal = Number(untPreisForJavaScript.replace(/,/g, '.'));;
+                            for(var key of usp.keys()) {
+                                subtotal += Number(usp.get(key));
+                            }
+                            document.getElementById('gesamtpreis').innerHTML = `Gesamt: ${sub = String(subtotal).replace(/\./g, ',')} €`;
+                            document.getElementById('gesamt').value = String(subtotal);
+                        }
+
+                        else if (dist <= 15.00) {
+                            pGeocode.innerHTML = `<p>
+                                                Ihre Adresse
+                                                <div id="route-hausnr">${response.data.results[0].address_components[1]["long_name"]} ${response.data.results[0].address_components[0]["long_name"]}</div>
+                                                <div id="post-locality">${response.data.results[0].address_components[len - 1]["long_name"]} ${locality}</div>
+                                                <p>liegt ${dist = String(dist).replace(/\./g, ',')} km vom Marienplatz entfernt. Somit ist die Anfahrt kostenlos.</p>
+                                                </p>`;
+                            usp.set('distance', '0.00');
+                            var subtotal = Number(untPreisForJavaScript.replace(/,/g, '.'));;
+                            for(var key of usp.keys()) {
+                                subtotal += Number(usp.get(key));
+                            }
+                            document.getElementById('gesamtpreis').innerHTML = `Gesamt: ${sub = String(subtotal).replace(/\./g, ',')} €`;
+                            document.getElementById('gesamt').value = String(subtotal);
+                            document.getElementById('kunde_adr_1').value = document.getElementById('route-hausnr').textContent;
+                            document.getElementById('kunde_adr_2').value = document.getElementById('post-locality').textContent;
+                        }
+
+                        else {
+                            pGeocode.innerHTML = `<p>
+                                                Ihre Adresse
+                                                <div id="route-hausnr">${response.data.results[0].address_components[1]["long_name"]} ${response.data.results[0].address_components[0]["long_name"]}</div>
+                                                <div id="post-locality">${response.data.results[0].address_components[len - 1]["long_name"]} ${locality}</div>
+                                                <p>liegt ${dist = String(dist).replace(/\./g, ',')} km vom Marienplatz entfernt. Der Aufpreis beträgt ${aufpreis = String(aufpreis).replace(/\./g, ',')} €.</p>
+                                                </p>`;
+                            usp.set('distance', aufpreis = String(aufpreis).replace(/,/g, '.'));
+                            var subtotal = Number(untPreisForJavaScript.replace(/,/g, '.'));;
+                            for(var key of usp.keys()) {
+                                subtotal += Number(usp.get(key));
+                            }
+                            document.getElementById('gesamtpreis').innerHTML = `Gesamt: ${sub = String(subtotal).replace(/\./g, ',')} €`;
+                            document.getElementById('gesamt').value = String(subtotal);
+                            document.getElementById('kunde_adr_1').value = document.getElementById('route-hausnr').textContent;
+                            document.getElementById('kunde_adr_2').value = document.getElementById('post-locality').textContent;
+                        }
+                        
+                    })
+                    .catch(function(error){
+                        console.log(error); // Turn into notification for user
+                    });
+                });
+            }
+            
+        
+    }})();
+    
+    vanlig();
+    digitalt();
+
+    /*console.log(document.getElementById('gesamtpreis_humanized').textContent);
+    document.getElementById('gesamtpreis_humanized').value = document.getElementById('gesamtpreis').textContent;
+    document.getElementById('gesamtpreis_humanized').innerHTML = document.getElementById('gesamtpreis').textContent;
+    console.log(document.getElementById('gesamtpreis_humanized').textContent);*/
+
+    //document.getElementById('gesamtpreis').value = document.getElementById('gesamtpreis').textContent;
+    
+</script>
+</html>

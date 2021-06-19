@@ -1,0 +1,2770 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <!--<link rel="stylesheet" href="background_styles.css">
+    <link rel="stylesheet" href="styles.css">-->
+    <title>Grid Example</title>
+    <style>
+
+        .wrapper{
+            display:grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: 4fr repeat(52, 10px);
+            grid-column-gap: 0.2em;
+
+            padding: 50px;
+
+            /*grid-gap: 0.2 em;*/
+        }
+
+        .wrapper > div{
+            background:#eee;
+            padding: 1em;
+            /*border: solid black*/
+        }
+        /*.wrapper > div:nth-child(odd){
+            background:#ddd;
+        }*/
+
+        #acht_1_1 {
+            background-color:chocolate;
+        }
+
+        #acht_1_2 {
+            background-color: cornflowerblue;
+        }
+
+        #acht_1_3 {
+            background-color: darkolivegreen;
+        }
+
+        #acht_1_4 {
+            background-color:darkturquoise;
+        }
+
+        #acht_1_5 {
+            background-color: forestgreen;
+        }
+
+        #acht_1_6 {
+            background-color: greenyellow;
+        }
+
+        #acht_1_7 {
+            background-color: indianred;
+        }
+
+        #acht_2_1 {
+            background-color: wheat;
+        }
+
+        #acht_2_2 {
+            background-color: yellow;
+        }
+
+        #acht_2_3 {
+            background-color: tomato;
+        }
+
+        #acht_2_4 {
+            background-color: blue;
+        }
+
+        #acht_2_5 {
+            background-color: lightblue;
+        }
+
+        #acht_2_6 {
+            background-color: lightsalmon;
+        }
+
+        #acht_2_7 {
+            background-color: magenta;
+        }
+
+        #acht_3_1 {
+            background-color: green;
+        }
+
+        #acht_3_2 {
+            background-color:blue;
+        }
+
+        #acht_3_3 {
+            background-color: indianred;
+        }
+
+        #acht_3_4 {
+            background-color: whitesmoke;
+        }
+
+        #acht_3_5 {
+            background-color: firebrick;
+        }
+
+        #acht_3_6 {
+            background-color: lime;
+        }
+
+        #acht_3_7 {
+            background-color: sandybrown;
+        }
+
+        #acht_4_1 {
+            background-color: indigo;
+        }
+
+        #acht_4_2 {
+            background-color: wheat;
+        }
+
+        #acht_4_3 {
+            background-color: plum;
+        }
+
+        #acht_4_4 {
+            background-color: aqua;
+        }
+
+        #acht_4_5 {
+            background-color: olive;
+        }
+
+        #acht_4_6 {
+            background-color: aquamarine;
+        }
+
+        #acht_4_7 {
+            background-color: lightseagreen;
+        }
+
+        #neun_1_1 {
+            background-color:chocolate;
+        }
+
+        #neun_1_2 {
+            background-color: cornflowerblue;
+        }
+
+        #neun_1_3 {
+            background-color: darkolivegreen;
+        }
+
+        #neun_1_4 {
+            background-color:darkturquoise;
+        }
+
+        #neun_1_5 {
+            background-color: forestgreen;
+        }
+
+        #neun_1_6 {
+            background-color: greenyellow;
+        }
+
+        #neun_1_7 {
+            background-color: indianred;
+        }
+
+        #neun_2_1 {
+            background-color: wheat;
+        }
+
+        #neun_2_2 {
+            background-color: yellow;
+        }
+
+        #neun_2_3 {
+            background-color: tomato;
+        }
+
+        #neun_2_4 {
+            background-color: blue;
+        }
+
+        #neun_2_5 {
+            background-color: lightblue;
+        }
+
+        #neun_2_6 {
+            background-color: lightsalmon;
+        }
+
+        #neun_2_7 {
+            background-color: magenta;
+        }
+
+        #neun_3_1 {
+            background-color: green;
+        }
+
+        #neun_3_2 {
+            background-color:blue;
+        }
+
+        #neun_3_3 {
+            background-color: indianred;
+        }
+
+        #neun_3_4 {
+            background-color: whitesmoke;
+        }
+
+        #neun_3_5 {
+            background-color: firebrick;
+        }
+
+        #neun_3_6 {
+            background-color: lime;
+        }
+
+        #neun_3_7 {
+            background-color: sandybrown;
+        }
+
+        #neun_4_1 {
+            background-color: indigo;
+        }
+
+        #neun_4_2 {
+            background-color: wheat;
+        }
+
+        #neun_4_3 {
+            background-color: plum;
+        }
+
+        #neun_4_4 {
+            background-color: aqua;
+        }
+
+        #neun_4_5 {
+            background-color: olive;
+        }
+
+        #neun_4_6 {
+            background-color: aquamarine;
+        }
+
+        #neun_4_7 {
+            background-color: lightseagreen;
+        }
+
+        #zehn_1_1 {
+            background-color:chocolate;
+        }
+
+        #zehn_1_2 {
+            background-color: cornflowerblue;
+        }
+
+        #zehn_1_3 {
+            background-color: darkolivegreen;
+        }
+
+        #zehn_1_4 {
+            background-color:darkturquoise;
+        }
+
+        #zehn_1_5 {
+            background-color: forestgreen;
+        }
+
+        #zehn_1_6 {
+            background-color: greenyellow;
+        }
+
+        #zehn_1_7 {
+            background-color: indianred;
+        }
+
+        #zehn_2_1 {
+            background-color: wheat;
+        }
+
+        #zehn_2_2 {
+            background-color: yellow;
+        }
+
+        #zehn_2_3 {
+            background-color: tomato;
+        }
+
+        #zehn_2_4 {
+            background-color: blue;
+        }
+
+        #zehn_2_5 {
+            background-color: lightblue;
+        }
+
+        #zehn_2_6 {
+            background-color: lightsalmon;
+        }
+
+        #zehn_2_7 {
+            background-color: magenta;
+        }
+
+        #zehn_3_1 {
+            background-color: green;
+        }
+
+        #zehn_3_2 {
+            background-color:blue;
+        }
+
+        #zehn_3_3 {
+            background-color: indianred;
+        }
+
+        #zehn_3_4 {
+            background-color: whitesmoke;
+        }
+
+        #zehn_3_5 {
+            background-color: firebrick;
+        }
+
+        #zehn_3_6 {
+            background-color: lime;
+        }
+
+        #zehn_3_7 {
+            background-color: sandybrown;
+        }
+
+        #zehn_4_1 {
+            background-color: indigo;
+        }
+
+        #zehn_4_2 {
+            background-color: wheat;
+        }
+
+        #zehn_4_3 {
+            background-color: plum;
+        }
+
+        #zehn_4_4 {
+            background-color: aqua;
+        }
+
+        #zehn_4_5 {
+            background-color: olive;
+        }
+
+        #zehn_4_6 {
+            background-color: aquamarine;
+        }
+
+        #zehn_4_7 {
+            background-color: lightseagreen;
+        }
+
+        #elf_1_1 {
+            background-color:chocolate;
+        }
+
+        #elf_1_2 {
+            background-color: cornflowerblue;
+        }
+
+        #elf_1_3 {
+            background-color: darkolivegreen;
+        }
+
+        #elf_1_4 {
+            background-color:darkturquoise;
+        }
+
+        #elf_1_5 {
+            background-color: forestgreen;
+        }
+
+        #elf_1_6 {
+            background-color: greenyellow;
+        }
+
+        #elf_1_7 {
+            background-color: indianred;
+        }
+
+        #elf_2_1 {
+            background-color: wheat;
+        }
+
+        #elf_2_2 {
+            background-color: yellow;
+        }
+
+        #elf_2_3 {
+            background-color: tomato;
+        }
+
+        #elf_2_4 {
+            background-color: blue;
+        }
+
+        #elf_2_5 {
+            background-color: lightblue;
+        }
+
+        #elf_2_6 {
+            background-color: lightsalmon;
+        }
+
+        #elf_2_7 {
+            background-color: magenta;
+        }
+
+        #elf_3_1 {
+            background-color: green;
+        }
+
+        #elf_3_2 {
+            background-color:blue;
+        }
+
+        #elf_3_3 {
+            background-color: indianred;
+        }
+
+        #elf_3_4 {
+            background-color: whitesmoke;
+        }
+
+        #elf_3_5 {
+            background-color: firebrick;
+        }
+
+        #elf_3_6 {
+            background-color: lime;
+        }
+
+        #elf_3_7 {
+            background-color: sandybrown;
+        }
+
+        #elf_4_1 {
+            background-color: indigo;
+        }
+
+        #elf_4_2 {
+            background-color: wheat;
+        }
+
+        #elf_4_3 {
+            background-color: plum;
+        }
+
+        #elf_4_4 {
+            background-color: aqua;
+        }
+
+        #elf_4_5 {
+            background-color: olive;
+        }
+
+        #elf_4_6 {
+            background-color: aquamarine;
+        }
+
+        #elf_4_7 {
+            background-color: lightseagreen;
+        }
+
+        #zwölf_1_1 {
+            background-color:chocolate;
+        }
+
+        #zwölf_1_2 {
+            background-color: cornflowerblue;
+        }
+
+        #zwölf_1_3 {
+            background-color: darkolivegreen;
+        }
+
+        #zwölf_1_4 {
+            background-color:darkturquoise;
+        }
+
+        #zwölf_1_5 {
+            background-color: forestgreen;
+        }
+
+        #zwölf_1_6 {
+            background-color: greenyellow;
+        }
+
+        #zwölf_1_7 {
+            background-color: indianred;
+        }
+
+        #zwölf_2_1 {
+            background-color: wheat;
+        }
+
+        #zwölf_2_2 {
+            background-color: yellow;
+        }
+
+        #zwölf_2_3 {
+            background-color: tomato;
+        }
+
+        #zwölf_2_4 {
+            background-color: blue;
+        }
+
+        #zwölf_2_5 {
+            background-color: lightblue;
+        }
+
+        #zwölf_2_6 {
+            background-color: lightsalmon;
+        }
+
+        #zwölf_2_7 {
+            background-color: magenta;
+        }
+
+        #zwölf_3_1 {
+            background-color: green;
+        }
+
+        #zwölf_3_2 {
+            background-color:blue;
+        }
+
+        #zwölf_3_3 {
+            background-color: indianred;
+        }
+
+        #zwölf_3_4 {
+            background-color: whitesmoke;
+        }
+
+        #zwölf_3_5 {
+            background-color: firebrick;
+        }
+
+        #zwölf_3_6 {
+            background-color: lime;
+        }
+
+        #zwölf_3_7 {
+            background-color: sandybrown;
+        }
+
+        #zwölf_4_1 {
+            background-color: indigo;
+        }
+
+        #zwölf_4_2 {
+            background-color: wheat;
+        }
+
+        #zwölf_4_3 {
+            background-color: plum;
+        }
+
+        #zwölf_4_4 {
+            background-color: aqua;
+        }
+
+        #zwölf_4_5 {
+            background-color: olive;
+        }
+
+        #zwölf_4_6 {
+            background-color: aquamarine;
+        }
+
+        #zwölf_4_7 {
+            background-color: lightseagreen;
+        }
+
+        #dreizehn_1_1 {
+            background-color:chocolate;
+        }
+
+        #dreizehn_1_2 {
+            background-color: cornflowerblue;
+        }
+
+        #dreizehn_1_3 {
+            background-color: darkolivegreen;
+        }
+
+        #dreizehn_1_4 {
+            background-color:darkturquoise;
+        }
+
+        #dreizehn_1_5 {
+            background-color: forestgreen;
+        }
+
+        #dreizehn_1_6 {
+            background-color: greenyellow;
+        }
+
+        #dreizehn_1_7 {
+            background-color: indianred;
+        }
+
+        #dreizehn_2_1 {
+            background-color: wheat;
+        }
+
+        #dreizehn_2_2 {
+            background-color: yellow;
+        }
+
+        #dreizehn_2_3 {
+            background-color: tomato;
+        }
+
+        #dreizehn_2_4 {
+            background-color: blue;
+        }
+
+        #dreizehn_2_5 {
+            background-color: lightblue;
+        }
+
+        #dreizehn_2_6 {
+            background-color: lightsalmon;
+        }
+
+        #dreizehn_2_7 {
+            background-color: magenta;
+        }
+
+        #dreizehn_3_1 {
+            background-color: green;
+        }
+
+        #dreizehn_3_2 {
+            background-color:blue;
+        }
+
+        #dreizehn_3_3 {
+            background-color: indianred;
+        }
+
+        #dreizehn_3_4 {
+            background-color: whitesmoke;
+        }
+
+        #dreizehn_3_5 {
+            background-color: firebrick;
+        }
+
+        #dreizehn_3_6 {
+            background-color: lime;
+        }
+
+        #dreizehn_3_7 {
+            background-color: sandybrown;
+        }
+
+        #dreizehn_4_1 {
+            background-color: indigo;
+        }
+
+        #dreizehn_4_2 {
+            background-color: wheat;
+        }
+
+        #dreizehn_4_3 {
+            background-color: plum;
+        }
+
+        #dreizehn_4_4 {
+            background-color: aqua;
+        }
+
+        #dreizehn_4_5 {
+            background-color: olive;
+        }
+
+        #dreizehn_4_6 {
+            background-color: aquamarine;
+        }
+
+        #dreizehn_4_7 {
+            background-color: lightseagreen;
+        }
+
+        #vierzehn_1_1 {
+            background-color:chocolate;
+        }
+
+        #vierzehn_1_2 {
+            background-color: cornflowerblue;
+        }
+
+        #vierzehn_1_3 {
+            background-color: darkolivegreen;
+        }
+
+        #vierzehn_1_4 {
+            background-color:darkturquoise;
+        }
+
+        #vierzehn_1_5 {
+            background-color: forestgreen;
+        }
+
+        #vierzehn_1_6 {
+            background-color: greenyellow;
+        }
+
+        #vierzehn_1_7 {
+            background-color: indianred;
+        }
+
+        #vierzehn_2_1 {
+            background-color: wheat;
+        }
+
+        #vierzehn_2_2 {
+            background-color: yellow;
+        }
+
+        #vierzehn_2_3 {
+            background-color: tomato;
+        }
+
+        #vierzehn_2_4 {
+            background-color: blue;
+        }
+
+        #vierzehn_2_5 {
+            background-color: lightblue;
+        }
+
+        #vierzehn_2_6 {
+            background-color: lightsalmon;
+        }
+
+        #vierzehn_2_7 {
+            background-color: magenta;
+        }
+
+        #vierzehn_3_1 {
+            background-color: green;
+        }
+
+        #vierzehn_3_2 {
+            background-color:blue;
+        }
+
+        #vierzehn_3_3 {
+            background-color: indianred;
+        }
+
+        #vierzehn_3_4 {
+            background-color: whitesmoke;
+        }
+
+        #vierzehn_3_5 {
+            background-color: firebrick;
+        }
+
+        #vierzehn_3_6 {
+            background-color: lime;
+        }
+
+        #vierzehn_3_7 {
+            background-color: sandybrown;
+        }
+
+        #vierzehn_4_1 {
+            background-color: indigo;
+        }
+
+        #vierzehn_4_2 {
+            background-color: wheat;
+        }
+
+        #vierzehn_4_3 {
+            background-color: plum;
+        }
+
+        #vierzehn_4_4 {
+            background-color: aqua;
+        }
+
+        #vierzehn_4_5 {
+            background-color: olive;
+        }
+
+        #vierzehn_4_6 {
+            background-color: aquamarine;
+        }
+
+        #vierzehn_4_7 {
+            background-color: lightseagreen;
+        }
+
+        #fünfzehn_1_1 {
+            background-color:chocolate;
+        }
+
+        #fünfzehn_1_2 {
+            background-color: cornflowerblue;
+        }
+
+        #fünfzehn_1_3 {
+            background-color: darkolivegreen;
+        }
+
+        #fünfzehn_1_4 {
+            background-color:darkturquoise;
+        }
+
+        #fünfzehn_1_5 {
+            background-color: forestgreen;
+        }
+
+        #fünfzehn_1_6 {
+            background-color: greenyellow;
+        }
+
+        #fünfzehn_1_7 {
+            background-color: indianred;
+        }
+
+        #fünfzehn_2_1 {
+            background-color: wheat;
+        }
+
+        #fünfzehn_2_2 {
+            background-color: yellow;
+        }
+
+        #fünfzehn_2_3 {
+            background-color: tomato;
+        }
+
+        #fünfzehn_2_4 {
+            background-color: blue;
+        }
+
+        #fünfzehn_2_5 {
+            background-color: lightblue;
+        }
+
+        #fünfzehn_2_6 {
+            background-color: lightsalmon;
+        }
+
+        #fünfzehn_2_7 {
+            background-color: magenta;
+        }
+
+        #fünfzehn_3_1 {
+            background-color: green;
+        }
+
+        #fünfzehn_3_2 {
+            background-color:blue;
+        }
+
+        #fünfzehn_3_3 {
+            background-color: indianred;
+        }
+
+        #fünfzehn_3_4 {
+            background-color: whitesmoke;
+        }
+
+        #fünfzehn_3_5 {
+            background-color: firebrick;
+        }
+
+        #fünfzehn_3_6 {
+            background-color: lime;
+        }
+
+        #fünfzehn_3_7 {
+            background-color: sandybrown;
+        }
+
+        #fünfzehn_4_1 {
+            background-color: indigo;
+        }
+
+        #fünfzehn_4_2 {
+            background-color: wheat;
+        }
+
+        #fünfzehn_4_3 {
+            background-color: plum;
+        }
+
+        #fünfzehn_4_4 {
+            background-color: aqua;
+        }
+
+        #fünfzehn_4_5 {
+            background-color: olive;
+        }
+
+        #fünfzehn_4_6 {
+            background-color: aquamarine;
+        }
+
+        #fünfzehn_4_7 {
+            background-color: lightseagreen;
+        }
+
+        #sechzehn_1_1 {
+            background-color:chocolate;
+        }
+
+        #sechzehn_1_2 {
+            background-color: cornflowerblue;
+        }
+
+        #sechzehn_1_3 {
+            background-color: darkolivegreen;
+        }
+
+        #sechzehn_1_4 {
+            background-color:darkturquoise;
+        }
+
+        #sechzehn_1_5 {
+            background-color: forestgreen;
+        }
+
+        #sechzehn_1_6 {
+            background-color: greenyellow;
+        }
+
+        #sechzehn_1_7 {
+            background-color: indianred;
+        }
+
+        #sechzehn_2_1 {
+            background-color: wheat;
+        }
+
+        #sechzehn_2_2 {
+            background-color: yellow;
+        }
+
+        #sechzehn_2_3 {
+            background-color: tomato;
+        }
+
+        #sechzehn_2_4 {
+            background-color: blue;
+        }
+
+        #sechzehn_2_5 {
+            background-color: lightblue;
+        }
+
+        #sechzehn_2_6 {
+            background-color: lightsalmon;
+        }
+
+        #sechzehn_2_7 {
+            background-color: magenta;
+        }
+
+        #sechzehn_3_1 {
+            background-color: green;
+        }
+
+        #sechzehn_3_2 {
+            background-color:blue;
+        }
+
+        #sechzehn_3_3 {
+            background-color: indianred;
+        }
+
+        #sechzehn_3_4 {
+            background-color: whitesmoke;
+        }
+
+        #sechzehn_3_5 {
+            background-color: firebrick;
+        }
+
+        #sechzehn_3_6 {
+            background-color: lime;
+        }
+
+        #sechzehn_3_7 {
+            background-color: sandybrown;
+        }
+
+        #sechzehn_4_1 {
+            background-color: indigo;
+        }
+
+        #sechzehn_4_2 {
+            background-color: wheat;
+        }
+
+        #sechzehn_4_3 {
+            background-color: plum;
+        }
+
+        #sechzehn_4_4 {
+            background-color: aqua;
+        }
+
+        #sechzehn_4_5 {
+            background-color: olive;
+        }
+
+        #sechzehn_4_6 {
+            background-color: aquamarine;
+        }
+
+        #sechzehn_4_7 {
+            background-color: lightseagreen;
+        }
+
+        #siebzehn_1_1 {
+            background-color:chocolate;
+        }
+
+        #siebzehn_1_2 {
+            background-color: cornflowerblue;
+        }
+
+        #siebzehn_1_3 {
+            background-color: darkolivegreen;
+        }
+
+        #siebzehn_1_4 {
+            background-color:darkturquoise;
+        }
+
+        #siebzehn_1_5 {
+            background-color: forestgreen;
+        }
+
+        #siebzehn_1_6 {
+            background-color: greenyellow;
+        }
+
+        #siebzehn_1_7 {
+            background-color: indianred;
+        }
+
+        #siebzehn_2_1 {
+            background-color: wheat;
+        }
+
+        #siebzehn_2_2 {
+            background-color: yellow;
+        }
+
+        #siebzehn_2_3 {
+            background-color: tomato;
+        }
+
+        #siebzehn_2_4 {
+            background-color: blue;
+        }
+
+        #siebzehn_2_5 {
+            background-color: lightblue;
+        }
+
+        #siebzehn_2_6 {
+            background-color: lightsalmon;
+        }
+
+        #siebzehn_2_7 {
+            background-color: magenta;
+        }
+
+        #siebzehn_3_1 {
+            background-color: green;
+        }
+
+        #siebzehn_3_2 {
+            background-color:blue;
+        }
+
+        #siebzehn_3_3 {
+            background-color: indianred;
+        }
+
+        #siebzehn_3_4 {
+            background-color: whitesmoke;
+        }
+
+        #siebzehn_3_5 {
+            background-color: firebrick;
+        }
+
+        #siebzehn_3_6 {
+            background-color: lime;
+        }
+
+        #siebzehn_3_7 {
+            background-color: sandybrown;
+        }
+
+        #siebzehn_4_1 {
+            background-color: indigo;
+        }
+
+        #siebzehn_4_2 {
+            background-color: wheat;
+        }
+
+        #siebzehn_4_3 {
+            background-color: plum;
+        }
+
+        #siebzehn_4_4 {
+            background-color: aqua;
+        }
+
+        #siebzehn_4_5 {
+            background-color: olive;
+        }
+
+        #siebzehn_4_6 {
+            background-color: aquamarine;
+        }
+
+        #siebzehn_4_7 {
+            background-color: lightseagreen;
+        }
+
+        #achtzehn_1_1 {
+            background-color:chocolate;
+        }
+
+        #achtzehn_1_2 {
+            background-color: cornflowerblue;
+        }
+
+        #achtzehn_1_3 {
+            background-color: darkolivegreen;
+        }
+
+        #achtzehn_1_4 {
+            background-color:darkturquoise;
+        }
+
+        #achtzehn_1_5 {
+            background-color: forestgreen;
+        }
+
+        #achtzehn_1_6 {
+            background-color: greenyellow;
+        }
+
+        #achtzehn_1_7 {
+            background-color: indianred;
+        }
+
+        #achtzehn_2_1 {
+            background-color: wheat;
+        }
+
+        #achtzehn_2_2 {
+            background-color: yellow;
+        }
+
+        #achtzehn_2_3 {
+            background-color: tomato;
+        }
+
+        #achtzehn_2_4 {
+            background-color: blue;
+        }
+
+        #achtzehn_2_5 {
+            background-color: lightblue;
+        }
+
+        #achtzehn_2_6 {
+            background-color: lightsalmon;
+        }
+
+        #achtzehn_2_7 {
+            background-color: magenta;
+        }
+
+        #achtzehn_3_1 {
+            background-color: green;
+        }
+
+        #achtzehn_3_2 {
+            background-color:blue;
+        }
+
+        #achtzehn_3_3 {
+            background-color: indianred;
+        }
+
+        #achtzehn_3_4 {
+            background-color: whitesmoke;
+        }
+
+        #achtzehn_3_5 {
+            background-color: firebrick;
+        }
+
+        #achtzehn_3_6 {
+            background-color: lime;
+        }
+
+        #achtzehn_3_7 {
+            background-color: sandybrown;
+        }
+
+        #achtzehn_4_1 {
+            background-color: indigo;
+        }
+
+        #achtzehn_4_2 {
+            background-color: wheat;
+        }
+
+        #achtzehn_4_3 {
+            background-color: plum;
+        }
+
+        #achtzehn_4_4 {
+            background-color: aqua;
+        }
+
+        #achtzehn_4_5 {
+            background-color: olive;
+        }
+
+        #achtzehn_4_6 {
+            background-color: aquamarine;
+        }
+
+        #achtzehn_4_7 {
+            background-color: lightseagreen;
+        }
+
+        #neunzehn_1_1 {
+            background-color:chocolate;
+        }
+
+        #neunzehn_1_2 {
+            background-color: cornflowerblue;
+        }
+
+        #neunzehn_1_3 {
+            background-color: darkolivegreen;
+        }
+
+        #neunzehn_1_4 {
+            background-color:darkturquoise;
+        }
+
+        #neunzehn_1_5 {
+            background-color: forestgreen;
+        }
+
+        #neunzehn_1_6 {
+            background-color: greenyellow;
+        }
+
+        #neunzehn_1_7 {
+            background-color: indianred;
+        }
+
+        #neunzehn_2_1 {
+            background-color: wheat;
+        }
+
+        #neunzehn_2_2 {
+            background-color: yellow;
+        }
+
+        #neunzehn_2_3 {
+            background-color: tomato;
+        }
+
+        #neunzehn_2_4 {
+            background-color: blue;
+        }
+
+        #neunzehn_2_5 {
+            background-color: lightblue;
+        }
+
+        #neunzehn_2_6 {
+            background-color: lightsalmon;
+        }
+
+        #neunzehn_2_7 {
+            background-color: magenta;
+        }
+
+        #neunzehn_3_1 {
+            background-color: green;
+        }
+
+        #neunzehn_3_2 {
+            background-color:blue;
+        }
+
+        #neunzehn_3_3 {
+            background-color: indianred;
+        }
+
+        #neunzehn_3_4 {
+            background-color: whitesmoke;
+        }
+
+        #neunzehn_3_5 {
+            background-color: firebrick;
+        }
+
+        #neunzehn_3_6 {
+            background-color: lime;
+        }
+
+        #neunzehn_3_7 {
+            background-color: sandybrown;
+        }
+
+        #neunzehn_4_1 {
+            background-color: indigo;
+        }
+
+        #neunzehn_4_2 {
+            background-color: wheat;
+        }
+
+        #neunzehn_4_3 {
+            background-color: plum;
+        }
+
+        #neunzehn_4_4 {
+            background-color: aqua;
+        }
+
+        #neunzehn_4_5 {
+            background-color: olive;
+        }
+
+        #neunzehn_4_6 {
+            background-color: aquamarine;
+        }
+
+        #neunzehn_4_7 {
+            background-color: lightseagreen;
+        }
+
+        #zwanzig_1_1 {
+            background-color:chocolate;
+        }
+
+        #zwanzig_1_2 {
+            background-color: cornflowerblue;
+        }
+
+        #zwanzig_1_3 {
+            background-color: darkolivegreen;
+        }
+
+        #zwanzig_1_4 {
+            background-color:darkturquoise;
+        }
+
+        #zwanzig_1_5 {
+            background-color: forestgreen;
+        }
+
+        #zwanzig_1_6 {
+            background-color: greenyellow;
+        }
+
+        #zwanzig_1_7 {
+            background-color: indianred;
+        }
+
+        #zwanzig_2_1 {
+            background-color: wheat;
+        }
+
+        #zwanzig_2_2 {
+            background-color: yellow;
+        }
+
+        #zwanzig_2_3 {
+            background-color: tomato;
+        }
+
+        #zwanzig_2_4 {
+            background-color: blue;
+        }
+
+        #zwanzig_2_5 {
+            background-color: lightblue;
+        }
+
+        #zwanzig_2_6 {
+            background-color: lightsalmon;
+        }
+
+        #zwanzig_2_7 {
+            background-color: magenta;
+        }
+
+        #zwanzig_3_1 {
+            background-color: green;
+        }
+
+        #zwanzig_3_2 {
+            background-color:blue;
+        }
+
+        #zwanzig_3_3 {
+            background-color: indianred;
+        }
+
+        #zwanzig_3_4 {
+            background-color: whitesmoke;
+        }
+
+        #zwanzig_3_5 {
+            background-color: firebrick;
+        }
+
+        #zwanzig_3_6 {
+            background-color: lime;
+        }
+
+        #zwanzig_3_7 {
+            background-color: sandybrown;
+        }
+
+        #zwanzig_4_1 {
+            background-color: indigo;
+        }
+
+        #zwanzig_4_2 {
+            background-color: wheat;
+        }
+
+        #zwanzig_4_3 {
+            background-color: plum;
+        }
+
+        #zwanzig_4_4 {
+            background-color: aqua;
+        }
+
+        #zwanzig_4_5 {
+            background-color: olive;
+        }
+
+        #zwanzig_4_6 {
+            background-color: aquamarine;
+        }
+
+        #zwanzig_4_7 {
+            background-color: lightseagreen;
+        }
+
+        /*.wrapper > div:nth-child(25n-2){
+            border: solid black;
+        }*/
+    </style>
+</head>
+<body>
+
+{% block content %}
+    <p>Hallo {{ user.username }}!</p><br>
+    <p>Dieser Stundenplan zeigt die nächsten sieben Tage an. Grün bedeutet verfügbar und grau nicht verfügbar. Ganz oben ist 08:00 Uhr und ganz unten 21:00 Uhr. Wähle zuerst einen Tag aus, dann eine verfügbaren Startzeitpunkt, und dann einen verfügbaren Endzeitpunkt. Die Mindestdauer ist 45 Minuten, und die Dauer der Unterrichtsstunde ist frei wählbar.</p>
+    <p id="kostenfaktor"></p>
+
+<h1>Ledige timer</h1>
+
+    {% for item in tag1 %}    
+    <p hidden id="tag1_bool"><strong>{{ item.date }}</strong></p>
+    <p hidden id="acht_1_1_bool">{{ item.acht_1 }}</p>
+    <p hidden id="acht_2_1_bool">{{ item.acht_2 }}</p>
+    <p hidden id="acht_3_1_bool">{{ item.acht_3 }}</p>
+    <p hidden id="acht_4_1_bool">{{ item.acht_4 }}</p>
+    <p hidden id="neun_1_1_bool">{{ item.neun_1 }}</p>
+    <p hidden id="neun_2_1_bool">{{ item.neun_2 }}</p>
+    <p hidden id="neun_3_1_bool">{{ item.neun_3 }}</p>
+    <p hidden id="neun_4_1_bool">{{ item.neun_4 }}</p>
+    <p hidden id="zehn_1_1_bool">{{ item.zehn_1 }}</p>
+    <p hidden id="zehn_2_1_bool">{{ item.zehn_2 }}</p>
+    <p hidden id="zehn_3_1_bool">{{ item.zehn_3 }}</p>
+    <p hidden id="zehn_4_1_bool">{{ item.zehn_4 }}</p>
+    <p hidden id="elf_1_1_bool">{{ item.elf_1 }}</p>
+    <p hidden id="elf_2_1_bool">{{ item.elf_2 }}</p>
+    <p hidden id="elf_3_1_bool">{{ item.elf_3 }}</p>
+    <p hidden id="elf_4_1_bool">{{ item.elf_4 }}</p>
+    <p hidden id="zwölf_1_1_bool">{{ item.zwölf_1 }}</p>
+    <p hidden id="zwölf_2_1_bool">{{ item.zwölf_2 }}</p>
+    <p hidden id="zwölf_3_1_bool">{{ item.zwölf_3 }}</p>
+    <p hidden id="zwölf_4_1_bool">{{ item.zwölf_4 }}</p>
+    <p hidden id="dreizehn_1_1_bool">{{ item.dreizehn_1 }}</p>
+    <p hidden id="dreizehn_2_1_bool">{{ item.dreizehn_2 }}</p>
+    <p hidden id="dreizehn_3_1_bool">{{ item.dreizehn_3 }}</p>
+    <p hidden id="dreizehn_4_1_bool">{{ item.dreizehn_4 }}</p>
+    <p hidden id="vierzehn_1_1_bool">{{ item.vierzehn_1 }}</p>
+    <p hidden id="vierzehn_2_1_bool">{{ item.vierzehn_2 }}</p>
+    <p hidden id="vierzehn_3_1_bool">{{ item.vierzehn_3 }}</p>
+    <p hidden id="vierzehn_4_1_bool">{{ item.vierzehn_4 }}</p>
+    <p hidden id="fünfzehn_1_1_bool">{{ item.fünfzehn_1 }}</p>
+    <p hidden id="fünfzehn_2_1_bool">{{ item.fünfzehn_2 }}</p>
+    <p hidden id="fünfzehn_3_1_bool">{{ item.fünfzehn_3 }}</p>
+    <p hidden id="fünfzehn_4_1_bool">{{ item.fünfzehn_4 }}</p>
+    <p hidden id="sechzehn_1_1_bool">{{ item.sechzehn_1 }}</p>
+    <p hidden id="sechzehn_2_1_bool">{{ item.sechzehn_2 }}</p>
+    <p hidden id="sechzehn_3_1_bool">{{ item.sechzehn_3 }}</p>
+    <p hidden id="sechzehn_4_1_bool">{{ item.sechzehn_4 }}</p>
+    <p hidden id="siebzehn_1_1_bool">{{ item.siebzehn_1 }}</p>
+    <p hidden id="siebzehn_2_1_bool">{{ item.siebzehn_2 }}</p>
+    <p hidden id="siebzehn_3_1_bool">{{ item.siebzehn_3 }}</p>
+    <p hidden id="siebzehn_4_1_bool">{{ item.siebzehn_4 }}</p>
+    <p hidden id="achtzehn_1_1_bool">{{ item.achtzehn_1 }}</p>
+    <p hidden id="achtzehn_2_1_bool">{{ item.achtzehn_2 }}</p>
+    <p hidden id="achtzehn_3_1_bool">{{ item.achtzehn_3 }}</p>
+    <p hidden id="achtzehn_4_1_bool">{{ item.achtzehn_4 }}</p>
+    <p hidden id="neunzehn_1_1_bool">{{ item.neunzehn_1 }}</p>
+    <p hidden id="neunzehn_2_1_bool">{{ item.neunzehn_2 }}</p>
+    <p hidden id="neunzehn_3_1_bool">{{ item.neunzehn_3 }}</p>
+    <p hidden id="neunzehn_4_1_bool">{{ item.neunzehn_4 }}</p>
+    <p hidden id="zwanzig_1_1_bool">{{ item.zwanzig_1 }}</p>
+    <p hidden id="zwanzig_2_1_bool">{{ item.zwanzig_2 }}</p>
+    <p hidden id="zwanzig_3_1_bool">{{ item.zwanzig_3 }}</p>
+    <p hidden id="zwanzig_4_1_bool">{{ item.zwanzig_4 }}</p>
+    {% endfor %}
+    {% for item in tag2 %}    
+    <p hidden id="tag2_bool"><strong>{{ item.date }}</strong></p>
+    <p hidden id="acht_1_2_bool">{{ item.acht_1 }}</p>
+    <p hidden id="acht_2_2_bool">{{ item.acht_2 }}</p>
+    <p hidden id="acht_3_2_bool">{{ item.acht_3 }}</p>
+    <p hidden id="acht_4_2_bool">{{ item.acht_4 }}</p>
+    <p hidden id="neun_1_2_bool">{{ item.neun_1 }}</p>
+    <p hidden id="neun_2_2_bool">{{ item.neun_2 }}</p>
+    <p hidden id="neun_3_2_bool">{{ item.neun_3 }}</p>
+    <p hidden id="neun_4_2_bool">{{ item.neun_4 }}</p>
+    <p hidden id="zehn_1_2_bool">{{ item.zehn_1 }}</p>
+    <p hidden id="zehn_2_2_bool">{{ item.zehn_2 }}</p>
+    <p hidden id="zehn_3_2_bool">{{ item.zehn_3 }}</p>
+    <p hidden id="zehn_4_2_bool">{{ item.zehn_4 }}</p>
+    <p hidden id="elf_1_2_bool">{{ item.elf_1 }}</p>
+    <p hidden id="elf_2_2_bool">{{ item.elf_2 }}</p>
+    <p hidden id="elf_3_2_bool">{{ item.elf_3 }}</p>
+    <p hidden id="elf_4_2_bool">{{ item.elf_4 }}</p>
+    <p hidden id="zwölf_1_2_bool">{{ item.zwölf_1 }}</p>
+    <p hidden id="zwölf_2_2_bool">{{ item.zwölf_2 }}</p>
+    <p hidden id="zwölf_3_2_bool">{{ item.zwölf_3 }}</p>
+    <p hidden id="zwölf_4_2_bool">{{ item.zwölf_4 }}</p>
+    <p hidden id="dreizehn_1_2_bool">{{ item.dreizehn_1 }}</p>
+    <p hidden id="dreizehn_2_2_bool">{{ item.dreizehn_2 }}</p>
+    <p hidden id="dreizehn_3_2_bool">{{ item.dreizehn_3 }}</p>
+    <p hidden id="dreizehn_4_2_bool">{{ item.dreizehn_4 }}</p>
+    <p hidden id="vierzehn_1_2_bool">{{ item.vierzehn_1 }}</p>
+    <p hidden id="vierzehn_2_2_bool">{{ item.vierzehn_2 }}</p>
+    <p hidden id="vierzehn_3_2_bool">{{ item.vierzehn_3 }}</p>
+    <p hidden id="vierzehn_4_2_bool">{{ item.vierzehn_4 }}</p>
+    <p hidden id="fünfzehn_1_2_bool">{{ item.fünfzehn_1 }}</p>
+    <p hidden id="fünfzehn_2_2_bool">{{ item.fünfzehn_2 }}</p>
+    <p hidden id="fünfzehn_3_2_bool">{{ item.fünfzehn_3 }}</p>
+    <p hidden id="fünfzehn_4_2_bool">{{ item.fünfzehn_4 }}</p>
+    <p hidden id="sechzehn_1_2_bool">{{ item.sechzehn_1 }}</p>
+    <p hidden id="sechzehn_2_2_bool">{{ item.sechzehn_2 }}</p>
+    <p hidden id="sechzehn_3_2_bool">{{ item.sechzehn_3 }}</p>
+    <p hidden id="sechzehn_4_2_bool">{{ item.sechzehn_4 }}</p>
+    <p hidden id="siebzehn_1_2_bool">{{ item.siebzehn_1 }}</p>
+    <p hidden id="siebzehn_2_2_bool">{{ item.siebzehn_2 }}</p>
+    <p hidden id="siebzehn_3_2_bool">{{ item.siebzehn_3 }}</p>
+    <p hidden id="siebzehn_4_2_bool">{{ item.siebzehn_4 }}</p>
+    <p hidden id="achtzehn_1_2_bool">{{ item.achtzehn_1 }}</p>
+    <p hidden id="achtzehn_2_2_bool">{{ item.achtzehn_2 }}</p>
+    <p hidden id="achtzehn_3_2_bool">{{ item.achtzehn_3 }}</p>
+    <p hidden id="achtzehn_4_2_bool">{{ item.achtzehn_4 }}</p>
+    <p hidden id="neunzehn_1_2_bool">{{ item.neunzehn_1 }}</p>
+    <p hidden id="neunzehn_2_2_bool">{{ item.neunzehn_2 }}</p>
+    <p hidden id="neunzehn_3_2_bool">{{ item.neunzehn_3 }}</p>
+    <p hidden id="neunzehn_4_2_bool">{{ item.neunzehn_4 }}</p>
+    <p hidden id="zwanzig_1_2_bool">{{ item.zwanzig_1 }}</p>
+    <p hidden id="zwanzig_2_2_bool">{{ item.zwanzig_2 }}</p>
+    <p hidden id="zwanzig_3_2_bool">{{ item.zwanzig_3 }}</p>
+    <p hidden id="zwanzig_4_2_bool">{{ item.zwanzig_4 }}</p>
+    {% endfor %}
+    {% for item in tag3 %}    
+    <p hidden id="tag3_bool"><strong>{{ item.date }}</strong></p>
+    <p hidden id="acht_1_3_bool">{{ item.acht_1 }}</p>
+    <p hidden id="acht_2_3_bool">{{ item.acht_2 }}</p>
+    <p hidden id="acht_3_3_bool">{{ item.acht_3 }}</p>
+    <p hidden id="acht_4_3_bool">{{ item.acht_4 }}</p>
+    <p hidden id="neun_1_3_bool">{{ item.neun_1 }}</p>
+    <p hidden id="neun_2_3_bool">{{ item.neun_2 }}</p>
+    <p hidden id="neun_3_3_bool">{{ item.neun_3 }}</p>
+    <p hidden id="neun_4_3_bool">{{ item.neun_4 }}</p>
+    <p hidden id="zehn_1_3_bool">{{ item.zehn_1 }}</p>
+    <p hidden id="zehn_2_3_bool">{{ item.zehn_2 }}</p>
+    <p hidden id="zehn_3_3_bool">{{ item.zehn_3 }}</p>
+    <p hidden id="zehn_4_3_bool">{{ item.zehn_4 }}</p>
+    <p hidden id="elf_1_3_bool">{{ item.elf_1 }}</p>
+    <p hidden id="elf_2_3_bool">{{ item.elf_2 }}</p>
+    <p hidden id="elf_3_3_bool">{{ item.elf_3 }}</p>
+    <p hidden id="elf_4_3_bool">{{ item.elf_4 }}</p>
+    <p hidden id="zwölf_1_3_bool">{{ item.zwölf_1 }}</p>
+    <p hidden id="zwölf_2_3_bool">{{ item.zwölf_2 }}</p>
+    <p hidden id="zwölf_3_3_bool">{{ item.zwölf_3 }}</p>
+    <p hidden id="zwölf_4_3_bool">{{ item.zwölf_4 }}</p>
+    <p hidden id="dreizehn_1_3_bool">{{ item.dreizehn_1 }}</p>
+    <p hidden id="dreizehn_2_3_bool">{{ item.dreizehn_2 }}</p>
+    <p hidden id="dreizehn_3_3_bool">{{ item.dreizehn_3 }}</p>
+    <p hidden id="dreizehn_4_3_bool">{{ item.dreizehn_4 }}</p>
+    <p hidden id="vierzehn_1_3_bool">{{ item.vierzehn_1 }}</p>
+    <p hidden id="vierzehn_2_3_bool">{{ item.vierzehn_2 }}</p>
+    <p hidden id="vierzehn_3_3_bool">{{ item.vierzehn_3 }}</p>
+    <p hidden id="vierzehn_4_3_bool">{{ item.vierzehn_4 }}</p>
+    <p hidden id="fünfzehn_1_3_bool">{{ item.fünfzehn_1 }}</p>
+    <p hidden id="fünfzehn_2_3_bool">{{ item.fünfzehn_2 }}</p>
+    <p hidden id="fünfzehn_3_3_bool">{{ item.fünfzehn_3 }}</p>
+    <p hidden id="fünfzehn_4_3_bool">{{ item.fünfzehn_4 }}</p>
+    <p hidden id="sechzehn_1_3_bool">{{ item.sechzehn_1 }}</p>
+    <p hidden id="sechzehn_2_3_bool">{{ item.sechzehn_2 }}</p>
+    <p hidden id="sechzehn_3_3_bool">{{ item.sechzehn_3 }}</p>
+    <p hidden id="sechzehn_4_3_bool">{{ item.sechzehn_4 }}</p>
+    <p hidden id="siebzehn_1_3_bool">{{ item.siebzehn_1 }}</p>
+    <p hidden id="siebzehn_2_3_bool">{{ item.siebzehn_2 }}</p>
+    <p hidden id="siebzehn_3_3_bool">{{ item.siebzehn_3 }}</p>
+    <p hidden id="siebzehn_4_3_bool">{{ item.siebzehn_4 }}</p>
+    <p hidden id="achtzehn_1_3_bool">{{ item.achtzehn_1 }}</p>
+    <p hidden id="achtzehn_2_3_bool">{{ item.achtzehn_2 }}</p>
+    <p hidden id="achtzehn_3_3_bool">{{ item.achtzehn_3 }}</p>
+    <p hidden id="achtzehn_4_3_bool">{{ item.achtzehn_4 }}</p>
+    <p hidden id="neunzehn_1_3_bool">{{ item.neunzehn_1 }}</p>
+    <p hidden id="neunzehn_2_3_bool">{{ item.neunzehn_2 }}</p>
+    <p hidden id="neunzehn_3_3_bool">{{ item.neunzehn_3 }}</p>
+    <p hidden id="neunzehn_4_3_bool">{{ item.neunzehn_4 }}</p>
+    <p hidden id="zwanzig_1_3_bool">{{ item.zwanzig_1 }}</p>
+    <p hidden id="zwanzig_2_3_bool">{{ item.zwanzig_2 }}</p>
+    <p hidden id="zwanzig_3_3_bool">{{ item.zwanzig_3 }}</p>
+    <p hidden id="zwanzig_4_3_bool">{{ item.zwanzig_4 }}</p>
+    {% endfor %}
+    {% for item in tag4 %}    
+    <p hidden id="tag4_bool"><strong>{{ item.date }}</strong></p>
+    <p hidden id="acht_1_4_bool">{{ item.acht_1 }}</p>
+    <p hidden id="acht_2_4_bool">{{ item.acht_2 }}</p>
+    <p hidden id="acht_3_4_bool">{{ item.acht_3 }}</p>
+    <p hidden id="acht_4_4_bool">{{ item.acht_4 }}</p>
+    <p hidden id="neun_1_4_bool">{{ item.neun_1 }}</p>
+    <p hidden id="neun_2_4_bool">{{ item.neun_2 }}</p>
+    <p hidden id="neun_3_4_bool">{{ item.neun_3 }}</p>
+    <p hidden id="neun_4_4_bool">{{ item.neun_4 }}</p>
+    <p hidden id="zehn_1_4_bool">{{ item.zehn_1 }}</p>
+    <p hidden id="zehn_2_4_bool">{{ item.zehn_2 }}</p>
+    <p hidden id="zehn_3_4_bool">{{ item.zehn_3 }}</p>
+    <p hidden id="zehn_4_4_bool">{{ item.zehn_4 }}</p>
+    <p hidden id="elf_1_4_bool">{{ item.elf_1 }}</p>
+    <p hidden id="elf_2_4_bool">{{ item.elf_2 }}</p>
+    <p hidden id="elf_3_4_bool">{{ item.elf_3 }}</p>
+    <p hidden id="elf_4_4_bool">{{ item.elf_4 }}</p>
+    <p hidden id="zwölf_1_4_bool">{{ item.zwölf_1 }}</p>
+    <p hidden id="zwölf_2_4_bool">{{ item.zwölf_2 }}</p>
+    <p hidden id="zwölf_3_4_bool">{{ item.zwölf_3 }}</p>
+    <p hidden id="zwölf_4_4_bool">{{ item.zwölf_4 }}</p>
+    <p hidden id="dreizehn_1_4_bool">{{ item.dreizehn_1 }}</p>
+    <p hidden id="dreizehn_2_4_bool">{{ item.dreizehn_2 }}</p>
+    <p hidden id="dreizehn_3_4_bool">{{ item.dreizehn_3 }}</p>
+    <p hidden id="dreizehn_4_4_bool">{{ item.dreizehn_4 }}</p>
+    <p hidden id="vierzehn_1_4_bool">{{ item.vierzehn_1 }}</p>
+    <p hidden id="vierzehn_2_4_bool">{{ item.vierzehn_2 }}</p>
+    <p hidden id="vierzehn_3_4_bool">{{ item.vierzehn_3 }}</p>
+    <p hidden id="vierzehn_4_4_bool">{{ item.vierzehn_4 }}</p>
+    <p hidden id="fünfzehn_1_4_bool">{{ item.fünfzehn_1 }}</p>
+    <p hidden id="fünfzehn_2_4_bool">{{ item.fünfzehn_2 }}</p>
+    <p hidden id="fünfzehn_3_4_bool">{{ item.fünfzehn_3 }}</p>
+    <p hidden id="fünfzehn_4_4_bool">{{ item.fünfzehn_4 }}</p>
+    <p hidden id="sechzehn_1_4_bool">{{ item.sechzehn_1 }}</p>
+    <p hidden id="sechzehn_2_4_bool">{{ item.sechzehn_2 }}</p>
+    <p hidden id="sechzehn_3_4_bool">{{ item.sechzehn_3 }}</p>
+    <p hidden id="sechzehn_4_4_bool">{{ item.sechzehn_4 }}</p>
+    <p hidden id="siebzehn_1_4_bool">{{ item.siebzehn_1 }}</p>
+    <p hidden id="siebzehn_2_4_bool">{{ item.siebzehn_2 }}</p>
+    <p hidden id="siebzehn_3_4_bool">{{ item.siebzehn_3 }}</p>
+    <p hidden id="siebzehn_4_4_bool">{{ item.siebzehn_4 }}</p>
+    <p hidden id="achtzehn_1_4_bool">{{ item.achtzehn_1 }}</p>
+    <p hidden id="achtzehn_2_4_bool">{{ item.achtzehn_2 }}</p>
+    <p hidden id="achtzehn_3_4_bool">{{ item.achtzehn_3 }}</p>
+    <p hidden id="achtzehn_4_4_bool">{{ item.achtzehn_4 }}</p>
+    <p hidden id="neunzehn_1_4_bool">{{ item.neunzehn_1 }}</p>
+    <p hidden id="neunzehn_2_4_bool">{{ item.neunzehn_2 }}</p>
+    <p hidden id="neunzehn_3_4_bool">{{ item.neunzehn_3 }}</p>
+    <p hidden id="neunzehn_4_4_bool">{{ item.neunzehn_4 }}</p>
+    <p hidden id="zwanzig_1_4_bool">{{ item.zwanzig_1 }}</p>
+    <p hidden id="zwanzig_2_4_bool">{{ item.zwanzig_2 }}</p>
+    <p hidden id="zwanzig_3_4_bool">{{ item.zwanzig_3 }}</p>
+    <p hidden id="zwanzig_4_4_bool">{{ item.zwanzig_4 }}</p>
+    {% endfor %}
+    {% for item in tag5 %}    
+    <p hidden id="tag5_bool"><strong>{{ item.date }}</strong></p>
+    <p hidden id="acht_1_5_bool">{{ item.acht_1 }}</p>
+    <p hidden id="acht_2_5_bool">{{ item.acht_2 }}</p>
+    <p hidden id="acht_3_5_bool">{{ item.acht_3 }}</p>
+    <p hidden id="acht_4_5_bool">{{ item.acht_4 }}</p>
+    <p hidden id="neun_1_5_bool">{{ item.neun_1 }}</p>
+    <p hidden id="neun_2_5_bool">{{ item.neun_2 }}</p>
+    <p hidden id="neun_3_5_bool">{{ item.neun_3 }}</p>
+    <p hidden id="neun_4_5_bool">{{ item.neun_4 }}</p>
+    <p hidden id="zehn_1_5_bool">{{ item.zehn_1 }}</p>
+    <p hidden id="zehn_2_5_bool">{{ item.zehn_2 }}</p>
+    <p hidden id="zehn_3_5_bool">{{ item.zehn_3 }}</p>
+    <p hidden id="zehn_4_5_bool">{{ item.zehn_4 }}</p>
+    <p hidden id="elf_1_5_bool">{{ item.elf_1 }}</p>
+    <p hidden id="elf_2_5_bool">{{ item.elf_2 }}</p>
+    <p hidden id="elf_3_5_bool">{{ item.elf_3 }}</p>
+    <p hidden id="elf_4_5_bool">{{ item.elf_4 }}</p>
+    <p hidden id="zwölf_1_5_bool">{{ item.zwölf_1 }}</p>
+    <p hidden id="zwölf_2_5_bool">{{ item.zwölf_2 }}</p>
+    <p hidden id="zwölf_3_5_bool">{{ item.zwölf_3 }}</p>
+    <p hidden id="zwölf_4_5_bool">{{ item.zwölf_4 }}</p>
+    <p hidden id="dreizehn_1_5_bool">{{ item.dreizehn_1 }}</p>
+    <p hidden id="dreizehn_2_5_bool">{{ item.dreizehn_2 }}</p>
+    <p hidden id="dreizehn_3_5_bool">{{ item.dreizehn_3 }}</p>
+    <p hidden id="dreizehn_4_5_bool">{{ item.dreizehn_4 }}</p>
+    <p hidden id="vierzehn_1_5_bool">{{ item.vierzehn_1 }}</p>
+    <p hidden id="vierzehn_2_5_bool">{{ item.vierzehn_2 }}</p>
+    <p hidden id="vierzehn_3_5_bool">{{ item.vierzehn_3 }}</p>
+    <p hidden id="vierzehn_4_5_bool">{{ item.vierzehn_4 }}</p>
+    <p hidden id="fünfzehn_1_5_bool">{{ item.fünfzehn_1 }}</p>
+    <p hidden id="fünfzehn_2_5_bool">{{ item.fünfzehn_2 }}</p>
+    <p hidden id="fünfzehn_3_5_bool">{{ item.fünfzehn_3 }}</p>
+    <p hidden id="fünfzehn_4_5_bool">{{ item.fünfzehn_4 }}</p>
+    <p hidden id="sechzehn_1_5_bool">{{ item.sechzehn_1 }}</p>
+    <p hidden id="sechzehn_2_5_bool">{{ item.sechzehn_2 }}</p>
+    <p hidden id="sechzehn_3_5_bool">{{ item.sechzehn_3 }}</p>
+    <p hidden id="sechzehn_4_5_bool">{{ item.sechzehn_4 }}</p>
+    <p hidden id="siebzehn_1_5_bool">{{ item.siebzehn_1 }}</p>
+    <p hidden id="siebzehn_2_5_bool">{{ item.siebzehn_2 }}</p>
+    <p hidden id="siebzehn_3_5_bool">{{ item.siebzehn_3 }}</p>
+    <p hidden id="siebzehn_4_5_bool">{{ item.siebzehn_4 }}</p>
+    <p hidden id="achtzehn_1_5_bool">{{ item.achtzehn_1 }}</p>
+    <p hidden id="achtzehn_2_5_bool">{{ item.achtzehn_2 }}</p>
+    <p hidden id="achtzehn_3_5_bool">{{ item.achtzehn_3 }}</p>
+    <p hidden id="achtzehn_4_5_bool">{{ item.achtzehn_4 }}</p>
+    <p hidden id="neunzehn_1_5_bool">{{ item.neunzehn_1 }}</p>
+    <p hidden id="neunzehn_2_5_bool">{{ item.neunzehn_2 }}</p>
+    <p hidden id="neunzehn_3_5_bool">{{ item.neunzehn_3 }}</p>
+    <p hidden id="neunzehn_4_5_bool">{{ item.neunzehn_4 }}</p>
+    <p hidden id="zwanzig_1_5_bool">{{ item.zwanzig_1 }}</p>
+    <p hidden id="zwanzig_2_5_bool">{{ item.zwanzig_2 }}</p>
+    <p hidden id="zwanzig_3_5_bool">{{ item.zwanzig_3 }}</p>
+    <p hidden id="zwanzig_4_5_bool">{{ item.zwanzig_4 }}</p>
+    {% endfor %}
+    {% for item in tag6 %}    
+    <p hidden id="tag6_bool"><strong>{{ item.date }}</strong></p>
+    <p hidden id="acht_1_6_bool">{{ item.acht_1 }}</p>
+    <p hidden id="acht_2_6_bool">{{ item.acht_2 }}</p>
+    <p hidden id="acht_3_6_bool">{{ item.acht_3 }}</p>
+    <p hidden id="acht_4_6_bool">{{ item.acht_4 }}</p>
+    <p hidden id="neun_1_6_bool">{{ item.neun_1 }}</p>
+    <p hidden id="neun_2_6_bool">{{ item.neun_2 }}</p>
+    <p hidden id="neun_3_6_bool">{{ item.neun_3 }}</p>
+    <p hidden id="neun_4_6_bool">{{ item.neun_4 }}</p>
+    <p hidden id="zehn_1_6_bool">{{ item.zehn_1 }}</p>
+    <p hidden id="zehn_2_6_bool">{{ item.zehn_2 }}</p>
+    <p hidden id="zehn_3_6_bool">{{ item.zehn_3 }}</p>
+    <p hidden id="zehn_4_6_bool">{{ item.zehn_4 }}</p>
+    <p hidden id="elf_1_6_bool">{{ item.elf_1 }}</p>
+    <p hidden id="elf_2_6_bool">{{ item.elf_2 }}</p>
+    <p hidden id="elf_3_6_bool">{{ item.elf_3 }}</p>
+    <p hidden id="elf_4_6_bool">{{ item.elf_4 }}</p>
+    <p hidden id="zwölf_1_6_bool">{{ item.zwölf_1 }}</p>
+    <p hidden id="zwölf_2_6_bool">{{ item.zwölf_2 }}</p>
+    <p hidden id="zwölf_3_6_bool">{{ item.zwölf_3 }}</p>
+    <p hidden id="zwölf_4_6_bool">{{ item.zwölf_4 }}</p>
+    <p hidden id="dreizehn_1_6_bool">{{ item.dreizehn_1 }}</p>
+    <p hidden id="dreizehn_2_6_bool">{{ item.dreizehn_2 }}</p>
+    <p hidden id="dreizehn_3_6_bool">{{ item.dreizehn_3 }}</p>
+    <p hidden id="dreizehn_4_6_bool">{{ item.dreizehn_4 }}</p>
+    <p hidden id="vierzehn_1_6_bool">{{ item.vierzehn_1 }}</p>
+    <p hidden id="vierzehn_2_6_bool">{{ item.vierzehn_2 }}</p>
+    <p hidden id="vierzehn_3_6_bool">{{ item.vierzehn_3 }}</p>
+    <p hidden id="vierzehn_4_6_bool">{{ item.vierzehn_4 }}</p>
+    <p hidden id="fünfzehn_1_6_bool">{{ item.fünfzehn_1 }}</p>
+    <p hidden id="fünfzehn_2_6_bool">{{ item.fünfzehn_2 }}</p>
+    <p hidden id="fünfzehn_3_6_bool">{{ item.fünfzehn_3 }}</p>
+    <p hidden id="fünfzehn_4_6_bool">{{ item.fünfzehn_4 }}</p>
+    <p hidden id="sechzehn_1_6_bool">{{ item.sechzehn_1 }}</p>
+    <p hidden id="sechzehn_2_6_bool">{{ item.sechzehn_2 }}</p>
+    <p hidden id="sechzehn_3_6_bool">{{ item.sechzehn_3 }}</p>
+    <p hidden id="sechzehn_4_6_bool">{{ item.sechzehn_4 }}</p>
+    <p hidden id="siebzehn_1_6_bool">{{ item.siebzehn_1 }}</p>
+    <p hidden id="siebzehn_2_6_bool">{{ item.siebzehn_2 }}</p>
+    <p hidden id="siebzehn_3_6_bool">{{ item.siebzehn_3 }}</p>
+    <p hidden id="siebzehn_4_6_bool">{{ item.siebzehn_4 }}</p>
+    <p hidden id="achtzehn_1_6_bool">{{ item.achtzehn_1 }}</p>
+    <p hidden id="achtzehn_2_6_bool">{{ item.achtzehn_2 }}</p>
+    <p hidden id="achtzehn_3_6_bool">{{ item.achtzehn_3 }}</p>
+    <p hidden id="achtzehn_4_6_bool">{{ item.achtzehn_4 }}</p>
+    <p hidden id="neunzehn_1_6_bool">{{ item.neunzehn_1 }}</p>
+    <p hidden id="neunzehn_2_6_bool">{{ item.neunzehn_2 }}</p>
+    <p hidden id="neunzehn_3_6_bool">{{ item.neunzehn_3 }}</p>
+    <p hidden id="neunzehn_4_6_bool">{{ item.neunzehn_4 }}</p>
+    <p hidden id="zwanzig_1_6_bool">{{ item.zwanzig_1 }}</p>
+    <p hidden id="zwanzig_2_6_bool">{{ item.zwanzig_2 }}</p>
+    <p hidden id="zwanzig_3_6_bool">{{ item.zwanzig_3 }}</p>
+    <p hidden id="zwanzig_4_6_bool">{{ item.zwanzig_4 }}</p>
+    {% endfor %}
+    {% for item in tag7 %}    
+    <p hidden id="tag7_bool"><strong>{{ item.date }}</strong></p>
+    <p hidden id="acht_1_7_bool">{{ item.acht_1 }}</p>
+    <p hidden id="acht_2_7_bool">{{ item.acht_2 }}</p>
+    <p hidden id="acht_3_7_bool">{{ item.acht_3 }}</p>
+    <p hidden id="acht_4_7_bool">{{ item.acht_4 }}</p>
+    <p hidden id="neun_1_7_bool">{{ item.neun_1 }}</p>
+    <p hidden id="neun_2_7_bool">{{ item.neun_2 }}</p>
+    <p hidden id="neun_3_7_bool">{{ item.neun_3 }}</p>
+    <p hidden id="neun_4_7_bool">{{ item.neun_4 }}</p>
+    <p hidden id="zehn_1_7_bool">{{ item.zehn_1 }}</p>
+    <p hidden id="zehn_2_7_bool">{{ item.zehn_2 }}</p>
+    <p hidden id="zehn_3_7_bool">{{ item.zehn_3 }}</p>
+    <p hidden id="zehn_4_7_bool">{{ item.zehn_4 }}</p>
+    <p hidden id="elf_1_7_bool">{{ item.elf_1 }}</p>
+    <p hidden id="elf_2_7_bool">{{ item.elf_2 }}</p>
+    <p hidden id="elf_3_7_bool">{{ item.elf_3 }}</p>
+    <p hidden id="elf_4_7_bool">{{ item.elf_4 }}</p>
+    <p hidden id="zwölf_1_7_bool">{{ item.zwölf_1 }}</p>
+    <p hidden id="zwölf_2_7_bool">{{ item.zwölf_2 }}</p>
+    <p hidden id="zwölf_3_7_bool">{{ item.zwölf_3 }}</p>
+    <p hidden id="zwölf_4_7_bool">{{ item.zwölf_4 }}</p>
+    <p hidden id="dreizehn_1_7_bool">{{ item.dreizehn_1 }}</p>
+    <p hidden id="dreizehn_2_7_bool">{{ item.dreizehn_2 }}</p>
+    <p hidden id="dreizehn_3_7_bool">{{ item.dreizehn_3 }}</p>
+    <p hidden id="dreizehn_4_7_bool">{{ item.dreizehn_4 }}</p>
+    <p hidden id="vierzehn_1_7_bool">{{ item.vierzehn_1 }}</p>
+    <p hidden id="vierzehn_2_7_bool">{{ item.vierzehn_2 }}</p>
+    <p hidden id="vierzehn_3_7_bool">{{ item.vierzehn_3 }}</p>
+    <p hidden id="vierzehn_4_7_bool">{{ item.vierzehn_4 }}</p>
+    <p hidden id="fünfzehn_1_7_bool">{{ item.fünfzehn_1 }}</p>
+    <p hidden id="fünfzehn_2_7_bool">{{ item.fünfzehn_2 }}</p>
+    <p hidden id="fünfzehn_3_7_bool">{{ item.fünfzehn_3 }}</p>
+    <p hidden id="fünfzehn_4_7_bool">{{ item.fünfzehn_4 }}</p>
+    <p hidden id="sechzehn_1_7_bool">{{ item.sechzehn_1 }}</p>
+    <p hidden id="sechzehn_2_7_bool">{{ item.sechzehn_2 }}</p>
+    <p hidden id="sechzehn_3_7_bool">{{ item.sechzehn_3 }}</p>
+    <p hidden id="sechzehn_4_7_bool">{{ item.sechzehn_4 }}</p>
+    <p hidden id="siebzehn_1_7_bool">{{ item.siebzehn_1 }}</p>
+    <p hidden id="siebzehn_2_7_bool">{{ item.siebzehn_2 }}</p>
+    <p hidden id="siebzehn_3_7_bool">{{ item.siebzehn_3 }}</p>
+    <p hidden id="siebzehn_4_7_bool">{{ item.siebzehn_4 }}</p>
+    <p hidden id="achtzehn_1_7_bool">{{ item.achtzehn_1 }}</p>
+    <p hidden id="achtzehn_2_7_bool">{{ item.achtzehn_2 }}</p>
+    <p hidden id="achtzehn_3_7_bool">{{ item.achtzehn_3 }}</p>
+    <p hidden id="achtzehn_4_7_bool">{{ item.achtzehn_4 }}</p>
+    <p hidden id="neunzehn_1_7_bool">{{ item.neunzehn_1 }}</p>
+    <p hidden id="neunzehn_2_7_bool">{{ item.neunzehn_2 }}</p>
+    <p hidden id="neunzehn_3_7_bool">{{ item.neunzehn_3 }}</p>
+    <p hidden id="neunzehn_4_7_bool">{{ item.neunzehn_4 }}</p>
+    <p hidden id="zwanzig_1_7_bool">{{ item.zwanzig_1 }}</p>
+    <p hidden id="zwanzig_2_7_bool">{{ item.zwanzig_2 }}</p>
+    <p hidden id="zwanzig_3_7_bool">{{ item.zwanzig_3 }}</p>
+    <p hidden id="zwanzig_4_7_bool">{{ item.zwanzig_4 }}</p>
+    {% endfor %}
+
+    <p hidden id="rabatt">{{ rabatt }}</p>
+
+<!--<p><strong>{{ day_difference }} days</strong></p>
+<p>{{ tag1 }}</p>
+<p>{{ tag2 }}</p>
+<p>{{ tag3 }}</p>
+<p>{{ tag4 }}</p>
+<p>{{ tag5 }}</p>
+<p>{{ tag6 }}</p>
+<p>{{ tag7 }}</p>-->
+
+
+
+
+
+
+<div class="wrapper">
+    <div id="tag1">{{ tag1_date }}</div>
+    <div id="tag2">{{ tag2_date }}</div>
+    <div id="tag3">{{ tag3_date }}</div>
+    <div id="tag4">{{ tag4_date }}</div>
+    <div id="tag5">{{ tag5_date }}</div>
+    <div id="tag6">{{ tag6_date }}</div>
+    <div id="tag7">{{ tag7_date }}</div>
+    <div id="acht_1_1"></div>
+    <div id="acht_1_2"></div>
+    <div id="acht_1_3"></div>
+    <div id="acht_1_4"></div>
+    <div id="acht_1_5"></div>
+    <div id="acht_1_6"></div>
+    <div id="acht_1_7"></div>
+    <div id="acht_2_1"></div>
+    <div id="acht_2_2"></div>
+    <div id="acht_2_3"></div>
+    <div id="acht_2_4"></div>
+    <div id="acht_2_5"></div>
+    <div id="acht_2_6"></div>
+    <div id="acht_2_7"></div>
+    <div id="acht_3_1"></div>
+    <div id="acht_3_2"></div>
+    <div id="acht_3_3"></div>
+    <div id="acht_3_4"></div>
+    <div id="acht_3_5"></div>
+    <div id="acht_3_6"></div>
+    <div id="acht_3_7"></div>
+    <div id="acht_4_1"></div>
+    <div id="acht_4_2"></div>
+    <div id="acht_4_3"></div>
+    <div id="acht_4_4"></div>
+    <div id="acht_4_5"></div>
+    <div id="acht_4_6"></div>
+    <div id="acht_4_7"></div>
+    <div id="neun_1_1"></div>
+    <div id="neun_1_2"></div>
+    <div id="neun_1_3"></div>
+    <div id="neun_1_4"></div>
+    <div id="neun_1_5"></div>
+    <div id="neun_1_6"></div>
+    <div id="neun_1_7"></div>
+    <div id="neun_2_1"></div>
+    <div id="neun_2_2"></div>
+    <div id="neun_2_3"></div>
+    <div id="neun_2_4"></div>
+    <div id="neun_2_5"></div>
+    <div id="neun_2_6"></div>
+    <div id="neun_2_7"></div>
+    <div id="neun_3_1"></div>
+    <div id="neun_3_2"></div>
+    <div id="neun_3_3"></div>
+    <div id="neun_3_4"></div>
+    <div id="neun_3_5"></div>
+    <div id="neun_3_6"></div>
+    <div id="neun_3_7"></div>
+    <div id="neun_4_1"></div>
+    <div id="neun_4_2"></div>
+    <div id="neun_4_3"></div>
+    <div id="neun_4_4"></div>
+    <div id="neun_4_5"></div>
+    <div id="neun_4_6"></div>
+    <div id="neun_4_7"></div>
+    <div id="zehn_1_1"></div>
+    <div id="zehn_1_2"></div>
+    <div id="zehn_1_3"></div>
+    <div id="zehn_1_4"></div>
+    <div id="zehn_1_5"></div>
+    <div id="zehn_1_6"></div>
+    <div id="zehn_1_7"></div>
+    <div id="zehn_2_1"></div>
+    <div id="zehn_2_2"></div>
+    <div id="zehn_2_3"></div>
+    <div id="zehn_2_4"></div>
+    <div id="zehn_2_5"></div>
+    <div id="zehn_2_6"></div>
+    <div id="zehn_2_7"></div>
+    <div id="zehn_3_1"></div>
+    <div id="zehn_3_2"></div>
+    <div id="zehn_3_3"></div>
+    <div id="zehn_3_4"></div>
+    <div id="zehn_3_5"></div>
+    <div id="zehn_3_6"></div>
+    <div id="zehn_3_7"></div>
+    <div id="zehn_4_1"></div>
+    <div id="zehn_4_2"></div>
+    <div id="zehn_4_3"></div>
+    <div id="zehn_4_4"></div>
+    <div id="zehn_4_5"></div>
+    <div id="zehn_4_6"></div>
+    <div id="zehn_4_7"></div>
+    <div id="elf_1_1"></div>
+    <div id="elf_1_2"></div>
+    <div id="elf_1_3"></div>
+    <div id="elf_1_4"></div>
+    <div id="elf_1_5"></div>
+    <div id="elf_1_6"></div>
+    <div id="elf_1_7"></div>
+    <div id="elf_2_1"></div>
+    <div id="elf_2_2"></div>
+    <div id="elf_2_3"></div>
+    <div id="elf_2_4"></div>
+    <div id="elf_2_5"></div>
+    <div id="elf_2_6"></div>
+    <div id="elf_2_7"></div>
+    <div id="elf_3_1"></div>
+    <div id="elf_3_2"></div>
+    <div id="elf_3_3"></div>
+    <div id="elf_3_4"></div>
+    <div id="elf_3_5"></div>
+    <div id="elf_3_6"></div>
+    <div id="elf_3_7"></div>
+    <div id="elf_4_1"></div>
+    <div id="elf_4_2"></div>
+    <div id="elf_4_3"></div>
+    <div id="elf_4_4"></div>
+    <div id="elf_4_5"></div>
+    <div id="elf_4_6"></div>
+    <div id="elf_4_7"></div>
+    <div id="zwölf_1_1"></div>
+    <div id="zwölf_1_2"></div>
+    <div id="zwölf_1_3"></div>
+    <div id="zwölf_1_4"></div>
+    <div id="zwölf_1_5"></div>
+    <div id="zwölf_1_6"></div>
+    <div id="zwölf_1_7"></div>
+    <div id="zwölf_2_1"></div>
+    <div id="zwölf_2_2"></div>
+    <div id="zwölf_2_3"></div>
+    <div id="zwölf_2_4"></div>
+    <div id="zwölf_2_5"></div>
+    <div id="zwölf_2_6"></div>
+    <div id="zwölf_2_7"></div>
+    <div id="zwölf_3_1"></div>
+    <div id="zwölf_3_2"></div>
+    <div id="zwölf_3_3"></div>
+    <div id="zwölf_3_4"></div>
+    <div id="zwölf_3_5"></div>
+    <div id="zwölf_3_6"></div>
+    <div id="zwölf_3_7"></div>
+    <div id="zwölf_4_1"></div>
+    <div id="zwölf_4_2"></div>
+    <div id="zwölf_4_3"></div>
+    <div id="zwölf_4_4"></div>
+    <div id="zwölf_4_5"></div>
+    <div id="zwölf_4_6"></div>
+    <div id="zwölf_4_7"></div>
+    <div id="dreizehn_1_1"></div>
+    <div id="dreizehn_1_2"></div>
+    <div id="dreizehn_1_3"></div>
+    <div id="dreizehn_1_4"></div>
+    <div id="dreizehn_1_5"></div>
+    <div id="dreizehn_1_6"></div>
+    <div id="dreizehn_1_7"></div>
+    <div id="dreizehn_2_1"></div>
+    <div id="dreizehn_2_2"></div>
+    <div id="dreizehn_2_3"></div>
+    <div id="dreizehn_2_4"></div>
+    <div id="dreizehn_2_5"></div>
+    <div id="dreizehn_2_6"></div>
+    <div id="dreizehn_2_7"></div>
+    <div id="dreizehn_3_1"></div>
+    <div id="dreizehn_3_2"></div>
+    <div id="dreizehn_3_3"></div>
+    <div id="dreizehn_3_4"></div>
+    <div id="dreizehn_3_5"></div>
+    <div id="dreizehn_3_6"></div>
+    <div id="dreizehn_3_7"></div>
+    <div id="dreizehn_4_1"></div>
+    <div id="dreizehn_4_2"></div>
+    <div id="dreizehn_4_3"></div>
+    <div id="dreizehn_4_4"></div>
+    <div id="dreizehn_4_5"></div>
+    <div id="dreizehn_4_6"></div>
+    <div id="dreizehn_4_7"></div>
+    <div id="vierzehn_1_1"></div>
+    <div id="vierzehn_1_2"></div>
+    <div id="vierzehn_1_3"></div>
+    <div id="vierzehn_1_4"></div>
+    <div id="vierzehn_1_5"></div>
+    <div id="vierzehn_1_6"></div>
+    <div id="vierzehn_1_7"></div>
+    <div id="vierzehn_2_1"></div>
+    <div id="vierzehn_2_2"></div>
+    <div id="vierzehn_2_3"></div>
+    <div id="vierzehn_2_4"></div>
+    <div id="vierzehn_2_5"></div>
+    <div id="vierzehn_2_6"></div>
+    <div id="vierzehn_2_7"></div>
+    <div id="vierzehn_3_1"></div>
+    <div id="vierzehn_3_2"></div>
+    <div id="vierzehn_3_3"></div>
+    <div id="vierzehn_3_4"></div>
+    <div id="vierzehn_3_5"></div>
+    <div id="vierzehn_3_6"></div>
+    <div id="vierzehn_3_7"></div>
+    <div id="vierzehn_4_1"></div>
+    <div id="vierzehn_4_2"></div>
+    <div id="vierzehn_4_3"></div>
+    <div id="vierzehn_4_4"></div>
+    <div id="vierzehn_4_5"></div>
+    <div id="vierzehn_4_6"></div>
+    <div id="vierzehn_4_7"></div>
+    <div id="fünfzehn_1_1"></div>
+    <div id="fünfzehn_1_2"></div>
+    <div id="fünfzehn_1_3"></div>
+    <div id="fünfzehn_1_4"></div>
+    <div id="fünfzehn_1_5"></div>
+    <div id="fünfzehn_1_6"></div>
+    <div id="fünfzehn_1_7"></div>
+    <div id="fünfzehn_2_1"></div>
+    <div id="fünfzehn_2_2"></div>
+    <div id="fünfzehn_2_3"></div>
+    <div id="fünfzehn_2_4"></div>
+    <div id="fünfzehn_2_5"></div>
+    <div id="fünfzehn_2_6"></div>
+    <div id="fünfzehn_2_7"></div>
+    <div id="fünfzehn_3_1"></div>
+    <div id="fünfzehn_3_2"></div>
+    <div id="fünfzehn_3_3"></div>
+    <div id="fünfzehn_3_4"></div>
+    <div id="fünfzehn_3_5"></div>
+    <div id="fünfzehn_3_6"></div>
+    <div id="fünfzehn_3_7"></div>
+    <div id="fünfzehn_4_1"></div>
+    <div id="fünfzehn_4_2"></div>
+    <div id="fünfzehn_4_3"></div>
+    <div id="fünfzehn_4_4"></div>
+    <div id="fünfzehn_4_5"></div>
+    <div id="fünfzehn_4_6"></div>
+    <div id="fünfzehn_4_7"></div>
+    <div id="sechzehn_1_1"></div>
+    <div id="sechzehn_1_2"></div>
+    <div id="sechzehn_1_3"></div>
+    <div id="sechzehn_1_4"></div>
+    <div id="sechzehn_1_5"></div>
+    <div id="sechzehn_1_6"></div>
+    <div id="sechzehn_1_7"></div>
+    <div id="sechzehn_2_1"></div>
+    <div id="sechzehn_2_2"></div>
+    <div id="sechzehn_2_3"></div>
+    <div id="sechzehn_2_4"></div>
+    <div id="sechzehn_2_5"></div>
+    <div id="sechzehn_2_6"></div>
+    <div id="sechzehn_2_7"></div>
+    <div id="sechzehn_3_1"></div>
+    <div id="sechzehn_3_2"></div>
+    <div id="sechzehn_3_3"></div>
+    <div id="sechzehn_3_4"></div>
+    <div id="sechzehn_3_5"></div>
+    <div id="sechzehn_3_6"></div>
+    <div id="sechzehn_3_7"></div>
+    <div id="sechzehn_4_1"></div>
+    <div id="sechzehn_4_2"></div>
+    <div id="sechzehn_4_3"></div>
+    <div id="sechzehn_4_4"></div>
+    <div id="sechzehn_4_5"></div>
+    <div id="sechzehn_4_6"></div>
+    <div id="sechzehn_4_7"></div>
+    <div id="siebzehn_1_1"></div>
+    <div id="siebzehn_1_2"></div>
+    <div id="siebzehn_1_3"></div>
+    <div id="siebzehn_1_4"></div>
+    <div id="siebzehn_1_5"></div>
+    <div id="siebzehn_1_6"></div>
+    <div id="siebzehn_1_7"></div>
+    <div id="siebzehn_2_1"></div>
+    <div id="siebzehn_2_2"></div>
+    <div id="siebzehn_2_3"></div>
+    <div id="siebzehn_2_4"></div>
+    <div id="siebzehn_2_5"></div>
+    <div id="siebzehn_2_6"></div>
+    <div id="siebzehn_2_7"></div>
+    <div id="siebzehn_3_1"></div>
+    <div id="siebzehn_3_2"></div>
+    <div id="siebzehn_3_3"></div>
+    <div id="siebzehn_3_4"></div>
+    <div id="siebzehn_3_5"></div>
+    <div id="siebzehn_3_6"></div>
+    <div id="siebzehn_3_7"></div>
+    <div id="siebzehn_4_1"></div>
+    <div id="siebzehn_4_2"></div>
+    <div id="siebzehn_4_3"></div>
+    <div id="siebzehn_4_4"></div>
+    <div id="siebzehn_4_5"></div>
+    <div id="siebzehn_4_6"></div>
+    <div id="siebzehn_4_7"></div>
+    <div id="achtzehn_1_1"></div>
+    <div id="achtzehn_1_2"></div>
+    <div id="achtzehn_1_3"></div>
+    <div id="achtzehn_1_4"></div>
+    <div id="achtzehn_1_5"></div>
+    <div id="achtzehn_1_6"></div>
+    <div id="achtzehn_1_7"></div>
+    <div id="achtzehn_2_1"></div>
+    <div id="achtzehn_2_2"></div>
+    <div id="achtzehn_2_3"></div>
+    <div id="achtzehn_2_4"></div>
+    <div id="achtzehn_2_5"></div>
+    <div id="achtzehn_2_6"></div>
+    <div id="achtzehn_2_7"></div>
+    <div id="achtzehn_3_1"></div>
+    <div id="achtzehn_3_2"></div>
+    <div id="achtzehn_3_3"></div>
+    <div id="achtzehn_3_4"></div>
+    <div id="achtzehn_3_5"></div>
+    <div id="achtzehn_3_6"></div>
+    <div id="achtzehn_3_7"></div>
+    <div id="achtzehn_4_1"></div>
+    <div id="achtzehn_4_2"></div>
+    <div id="achtzehn_4_3"></div>
+    <div id="achtzehn_4_4"></div>
+    <div id="achtzehn_4_5"></div>
+    <div id="achtzehn_4_6"></div>
+    <div id="achtzehn_4_7"></div>
+    <div id="neunzehn_1_1"></div>
+    <div id="neunzehn_1_2"></div>
+    <div id="neunzehn_1_3"></div>
+    <div id="neunzehn_1_4"></div>
+    <div id="neunzehn_1_5"></div>
+    <div id="neunzehn_1_6"></div>
+    <div id="neunzehn_1_7"></div>
+    <div id="neunzehn_2_1"></div>
+    <div id="neunzehn_2_2"></div>
+    <div id="neunzehn_2_3"></div>
+    <div id="neunzehn_2_4"></div>
+    <div id="neunzehn_2_5"></div>
+    <div id="neunzehn_2_6"></div>
+    <div id="neunzehn_2_7"></div>
+    <div id="neunzehn_3_1"></div>
+    <div id="neunzehn_3_2"></div>
+    <div id="neunzehn_3_3"></div>
+    <div id="neunzehn_3_4"></div>
+    <div id="neunzehn_3_5"></div>
+    <div id="neunzehn_3_6"></div>
+    <div id="neunzehn_3_7"></div>
+    <div id="neunzehn_4_1"></div>
+    <div id="neunzehn_4_2"></div>
+    <div id="neunzehn_4_3"></div>
+    <div id="neunzehn_4_4"></div>
+    <div id="neunzehn_4_5"></div>
+    <div id="neunzehn_4_6"></div>
+    <div id="neunzehn_4_7"></div>
+    <div id="zwanzig_1_1"></div>
+    <div id="zwanzig_1_2"></div>
+    <div id="zwanzig_1_3"></div>
+    <div id="zwanzig_1_4"></div>
+    <div id="zwanzig_1_5"></div>
+    <div id="zwanzig_1_6"></div>
+    <div id="zwanzig_1_7"></div>
+    <div id="zwanzig_2_1"></div>
+    <div id="zwanzig_2_2"></div>
+    <div id="zwanzig_2_3"></div>
+    <div id="zwanzig_2_4"></div>
+    <div id="zwanzig_2_5"></div>
+    <div id="zwanzig_2_6"></div>
+    <div id="zwanzig_2_7"></div>
+    <div id="zwanzig_3_1"></div>
+    <div id="zwanzig_3_2"></div>
+    <div id="zwanzig_3_3"></div>
+    <div id="zwanzig_3_4"></div>
+    <div id="zwanzig_3_5"></div>
+    <div id="zwanzig_3_6"></div>
+    <div id="zwanzig_3_7"></div>
+    <div id="zwanzig_4_1"></div>
+    <div id="zwanzig_4_2"></div>
+    <div id="zwanzig_4_3"></div>
+    <div id="zwanzig_4_4"></div>
+    <div id="zwanzig_4_5"></div>
+    <div id="zwanzig_4_6"></div>
+    <div id="zwanzig_4_7"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>   
+
+<h1>Join Today!</h1>
+
+    
+        <div>
+            <label for="day">Bitte wählen Sie einen Tag aus:</label>
+            <select name="day" id="day">
+                <option value=null>---</option>
+                <option id="tag1_drop" value="0">{{ tag1_date }}</option>
+                <option id="tag2_drop" value="1">{{ tag2_date }}</option>
+                <option id="tag3_drop" value="2">{{ tag3_date }}</option>
+                <option id="tag4_drop" value="3">{{ tag4_date }}</option>
+                <option id="tag5_drop" value="4">{{ tag5_date }}</option>
+                <option id="tag6_drop" value="5">{{ tag6_date }}</option>
+                <option id="tag7_drop" value="6">{{ tag7_date }}</option>
+            </select>
+        </div>   
+        <p id="hour_start"></p>
+        <p id="hour_end"></p>
+        <p id="after_select"></p>
+        
+    </form>
+
+
+
+</body>
+
+{% endblock %}
+
+<script>
+
+    if (document.getElementById('rabatt').textContent == '60') {
+        document.getElementById('kostenfaktor').textContent = 'Es sind noch 60 kostenfreie Unterrichtsminuten übrig. Es ist möglich, verbleibende 15 Minuten nächstes Mal anrechnen zu lassen.'
+    }
+
+    if (document.getElementById('rabatt').textContent == '15') {
+        document.getElementById('kostenfaktor').textContent = 'Es sind noch 15 kostenfreie Minuten übrig.'
+    }
+
+
+
+
+
+    var day_digit = [];
+    var month_digit = [];
+    var month_word_db = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
+    var month_word = [];
+    var year_digit = [];
+    old_date_list = [];
+    for (var i = 0; i < 7; i++) {                    
+            var old_date = document.getElementById("tag" + String(i+1)).textContent;
+            old_date_list.push(old_date);
+            day_digit.push(old_date.slice(8));
+            month_digit.push(Number(old_date.slice(5, 7)));
+            month_word.push(month_word_db[month_digit[i]-1]);
+            year_digit.push(old_date.slice(0, 4));
+
+            document.getElementById("tag" + String(i+1)).textContent = day_digit[i] + ". " + month_word[i];
+            document.getElementById("tag" + String(i+1) + "_drop").textContent = day_digit[i] + ". " + month_word[i];
+        }
+
+
+    for (n=1; n<=4; n++) {
+        for (m=1; m<=7; m++) {
+            if (document.getElementById('acht_' + String(n) + '_' + String(m) + '_bool').textContent == 'True') {
+                document.getElementById('acht_' + String(n) + '_' + String(m)).style.backgroundColor = 'green';
+            } else {
+                document.getElementById('acht_' + String(n) + '_' + String(m)).style.backgroundColor = 'lightgray';
+            }
+        }
+    }
+    for (n=1; n<=4; n++) {
+        for (m=1; m<=7; m++) {
+            if (document.getElementById('neun_' + String(n) + '_' + String(m) + '_bool').textContent == 'True') {
+                document.getElementById('neun_' + String(n) + '_' + String(m)).style.backgroundColor = 'green';
+            } else {
+                document.getElementById('neun_' + String(n) + '_' + String(m)).style.backgroundColor = 'lightgray';
+            }
+        }
+    }
+    for (n=1; n<=4; n++) {
+        for (m=1; m<=7; m++) {
+            if (document.getElementById('zehn_' + String(n) + '_' + String(m) + '_bool').textContent == 'True') {
+                document.getElementById('zehn_' + String(n) + '_' + String(m)).style.backgroundColor = 'green';
+            } else {
+                document.getElementById('zehn_' + String(n) + '_' + String(m)).style.backgroundColor = 'lightgray';
+            }
+        }
+    }
+    for (n=1; n<=4; n++) {
+        for (m=1; m<=7; m++) {
+            if (document.getElementById('elf_' + String(n) + '_' + String(m) + '_bool').textContent == 'True') {
+                document.getElementById('elf_' + String(n) + '_' + String(m)).style.backgroundColor = 'green';
+            } else {
+                document.getElementById('elf_' + String(n) + '_' + String(m)).style.backgroundColor = 'lightgray';
+            }
+        }
+    }
+    for (n=1; n<=4; n++) {
+        for (m=1; m<=7; m++) {
+            if (document.getElementById('zwölf_' + String(n) + '_' + String(m) + '_bool').textContent == 'True') {
+                document.getElementById('zwölf_' + String(n) + '_' + String(m)).style.backgroundColor = 'green';
+            } else {
+                document.getElementById('zwölf_' + String(n) + '_' + String(m)).style.backgroundColor = 'lightgray';
+            }
+        }
+    }
+    for (n=1; n<=4; n++) {
+        for (m=1; m<=7; m++) {
+            if (document.getElementById('dreizehn_' + String(n) + '_' + String(m) + '_bool').textContent == 'True') {
+                document.getElementById('dreizehn_' + String(n) + '_' + String(m)).style.backgroundColor = 'green';
+            } else {
+                document.getElementById('dreizehn_' + String(n) + '_' + String(m)).style.backgroundColor = 'lightgray';
+            }
+        }
+    }
+    for (n=1; n<=4; n++) {
+        for (m=1; m<=7; m++) {
+            if (document.getElementById('vierzehn_' + String(n) + '_' + String(m) + '_bool').textContent == 'True') {
+                document.getElementById('vierzehn_' + String(n) + '_' + String(m)).style.backgroundColor = 'green';
+            } else {
+                document.getElementById('vierzehn_' + String(n) + '_' + String(m)).style.backgroundColor = 'lightgray';
+            }
+        }
+    }
+    for (n=1; n<=4; n++) {
+        for (m=1; m<=7; m++) {
+            if (document.getElementById('fünfzehn_' + String(n) + '_' + String(m) + '_bool').textContent == 'True') {
+                document.getElementById('fünfzehn_' + String(n) + '_' + String(m)).style.backgroundColor = 'green';
+            } else {
+                document.getElementById('fünfzehn_' + String(n) + '_' + String(m)).style.backgroundColor = 'lightgray';
+            }
+        }
+    }
+    for (n=1; n<=4; n++) {
+        for (m=1; m<=7; m++) {
+            if (document.getElementById('sechzehn_' + String(n) + '_' + String(m) + '_bool').textContent == 'True') {
+                document.getElementById('sechzehn_' + String(n) + '_' + String(m)).style.backgroundColor = 'green';
+            } else {
+                document.getElementById('sechzehn_' + String(n) + '_' + String(m)).style.backgroundColor = 'lightgray';
+            }
+        }
+    }
+    for (n=1; n<=4; n++) {
+        for (m=1; m<=7; m++) {
+            if (document.getElementById('siebzehn_' + String(n) + '_' + String(m) + '_bool').textContent == 'True') {
+                document.getElementById('siebzehn_' + String(n) + '_' + String(m)).style.backgroundColor = 'green';
+            } else {
+                document.getElementById('siebzehn_' + String(n) + '_' + String(m)).style.backgroundColor = 'lightgray';
+            }
+        }
+    }
+    for (n=1; n<=4; n++) {
+        for (m=1; m<=7; m++) {
+            if (document.getElementById('achtzehn_' + String(n) + '_' + String(m) + '_bool').textContent == 'True') {
+                document.getElementById('achtzehn_' + String(n) + '_' + String(m)).style.backgroundColor = 'green';
+            } else {
+                document.getElementById('achtzehn_' + String(n) + '_' + String(m)).style.backgroundColor = 'lightgray';
+            }
+        }
+    }
+    for (n=1; n<=4; n++) {
+        for (m=1; m<=7; m++) {
+            if (document.getElementById('neunzehn_' + String(n) + '_' + String(m) + '_bool').textContent == 'True') {
+                document.getElementById('neunzehn_' + String(n) + '_' + String(m)).style.backgroundColor = 'green';
+            } else {
+                document.getElementById('neunzehn_' + String(n) + '_' + String(m)).style.backgroundColor = 'lightgray';
+            }
+        }
+    }
+    for (n=1; n<=4; n++) {
+        for (m=1; m<=7; m++) {
+            if (document.getElementById('zwanzig_' + String(n) + '_' + String(m) + '_bool').textContent == 'True') {
+                document.getElementById('zwanzig_' + String(n) + '_' + String(m)).style.backgroundColor = 'green';
+            } else {
+                document.getElementById('zwanzig_' + String(n) + '_' + String(m)).style.backgroundColor = 'lightgray';
+            }
+        }
+    }
+
+    var zahl = ["acht", "neun", "zehn", "elf", "zwölf", "dreizehn", "vierzehn", "fünfzehn", "sechzehn", "siebzehn", "achtzehn", "neunzehn", "zwanzig"];
+    var number = ["08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"];
+    var digit = ["00", "15", "30", "45", "00"];
+    var tag1_green = [];
+    var tag2_green = [];
+    var tag3_green = [];
+    var tag4_green = [];
+    var tag5_green = [];
+    var tag6_green = [];
+    var tag7_green = [];
+    arr = [tag1_green,
+        tag2_green,
+        tag3_green,
+        tag4_green,
+        tag5_green,
+        tag6_green,
+        tag7_green
+        ];
+    var arrayLength = zahl.length;
+    for (var i = 0; i < arrayLength; i++) {
+        number_sel_start = number[i];
+        number_sel_end = number[i];
+        for (n=1; n<=4; n++) {
+            digit_sel_start = digit[n-1];
+            digit_sel_end = digit[n];
+            if (n == 4) {
+                number_sel_end = number[i+1]
+            }
+            for (m=1; m<=7; m++) {
+                condition_id = String(zahl[i]) + '_' + String(n) + '_' + String(m) + '_bool'
+                condition_id_new = String(zahl[i]) + '_' + String(n) + '_' + String(m)
+                if (document.getElementById(condition_id).textContent == 'True') {
+                    arr[m-1].push([condition_id_new, number_sel_start + ':' + digit_sel_start, number_sel_end + ':' + digit_sel_end]);
+                }
+            }
+        }
+    }
+
+    document.getElementById("day").addEventListener("change", function () {
+        document.getElementById("hour_end").innerHTML = "";
+        document.getElementById("after_select").innerHTML ="";
+        var rel_green_start = arr[document.getElementById("day").value];
+        var arrayLength = rel_green_start.length;
+        var start_values = [];
+        for (var i = 0; i < arrayLength; i++) {
+            start_values.push(rel_green_start[i][1]);
+        }
+        outputHTML = `
+            <label for="hour_start">Bitte wählen Sie den Startzeitpunkt aus:</label>
+                <select name="hour_start" id="hour_start_select_id">
+                    <option value=null>---</option>
+        `;
+        for (var i = 0; i < arrayLength; i++) {
+            outputHTML += `<option value="${i}">${start_values[i]}</option>`;
+        }
+        outputHTML += `</select>`;
+        document.getElementById("hour_start").innerHTML = outputHTML;
+
+        hourEndSelect(start_values);
+    });
+
+
+    var afterSelect = (function (start_values, day_digit, month_word, year_digit, old_date_list) {
+        return function (start_values, day_digit, month_word, year_digit, old_date_list) {
+            document.getElementById("hour_end_select_id").addEventListener("change", function () {
+                var start_time_number = Number(document.getElementById("hour_start_select_id").value);
+                var start_time_digits = start_values[start_time_number];
+                var start_hour = Number(start_time_digits.slice(0, 2));
+                var start_minute = Number(start_time_digits.slice(3));
+                var end_time_digits = document.getElementById("hour_end_select_id").value;
+                if (end_time_digits === "null") {
+                    document.getElementById("after_select").innerHTML = "";
+                } else {
+                    var end_hour = Number(end_time_digits.slice(0, 2));
+                    var end_minute = Number(end_time_digits.slice(3));
+                    var indexibexi = Number(document.getElementById("day").value)
+
+                    if ((end_hour - start_hour) == 0) {
+                        dauer_h = "0";
+                        dauer_min = String(end_minute - start_minute);                        
+                    }
+                    
+                    else if (end_minute < start_minute) {
+                        dauer_h = String(end_hour - start_hour - 1);
+                        dauer_min = String((60 - start_minute) + end_minute);
+                    }
+
+                    else {
+                        dauer_h = String(end_hour - start_hour);
+                        dauer_min = String(end_minute - start_minute);
+                    }
+
+                    var unt_preis = String(Number(dauer_h)*59 + Number(dauer_min)/60*59);
+
+                    if (document.getElementById('rabatt').textContent == '60') {
+                        if (unt_preis <= 59) {
+                            unt_preis = '0'
+                        }
+                        if (unt_preis > 59) {
+                            unt_preis = String(Number(unt_preis) - 59)
+                        }
+                    }
+                    if (document.getElementById('rabatt').textContent == '15') {
+                        unt_preis = String(Number(unt_preis) - 14.75)
+                    }
+
+                    var zahlen = ['acht', 'neun', 'zehn', 'elf', "zwölf", "dreizehn", "vierzehn", "fünfzehn", "sechzehn", "siebzehn", "achtzehn", "neunzehn", "zwanzig"];
+                    var zahlen_array = [];
+                    for (i = 0; i < zahlen.length; i++) {
+                        var zahl = zahlen[i];
+                        for (j = 1; j<5; j++) {
+                            zahlen_array.push(zahl + "_" + String(j));
+                        }
+                    }
+                   
+                    var klokkeslett_start = ['08:00', '08:15', '08:30', '08:45', '09:00', '09:15', '09:30', '09:45', '10:00', '10:15', '10:30', '10:45', '11:00', '11:15', '11:30', '11:45', '12:00', '12:15', '12:30', '12:45', '13:00', '13:15', '13:30', '13:45', '14:00', '14:15', '14:30', '14:45', '15:00', '15:15', '15:30', '15:45', '16:00', '16:15', '16:30', '16:45', '17:00', '17:15', '17:30', '17:45', '18:00', '18:15', '18:30', '18:45', '19:00', '19:15', '19:30', '19:45', '20:00', '20:15', '20:30', '20:45'];
+                    var klokkeslett_end = ['08:15', '08:30', '08:45', '09:00', '09:15', '09:30', '09:45', '10:00', '10:15', '10:30', '10:45', '11:00', '11:15', '11:30', '11:45', '12:00', '12:15', '12:30', '12:45', '13:00', '13:15', '13:30', '13:45', '14:00', '14:15', '14:30', '14:45', '15:00', '15:15', '15:30', '15:45', '16:00', '16:15', '16:30', '16:45', '17:00', '17:15', '17:30', '17:45', '18:00', '18:15', '18:30', '18:45', '19:00', '19:15', '19:30', '19:45', '20:00', '20:15', '20:30', '20:45', '21:00'];
+                    
+                    if (Number(start_time_digits.slice(0, 2)) > 8) {
+                        if (Number(start_time_digits.slice(0, 2)) <= 10) {
+                            start_zahlwort = zahlen_array[klokkeslett_start.indexOf("0" + String(Number(start_time_digits.slice(0, 2)) - 1) + ":" + start_time_digits.slice(3))];
+                        } else {
+                            start_zahlwort = zahlen_array[klokkeslett_start.indexOf(String(Number(start_time_digits.slice(0, 2)) - 1) + ":" + start_time_digits.slice(3))];
+                        }
+                    } else {
+                        start_zahlwort = 'acht_1';
+                    }
+                    console.log()
+                    if (Number(end_time_digits.slice(0, 2)) < 20) {
+                        if (Number(end_time_digits.slice(0, 2)) == 8) {
+                            end_zahlwort = zahlen_array[klokkeslett_end.indexOf("0" + String(Number(end_time_digits.slice(0, 2)) + 1) + ":" + end_time_digits.slice(3))];
+                        } else {
+                            end_zahlwort = zahlen_array[klokkeslett_end.indexOf(String(Number(end_time_digits.slice(0, 2)) + 1) + ":" + end_time_digits.slice(3))];
+                        }
+                    } else {
+                        end_zahlwort = 'zwanzig_4';
+                    }
+
+                    //console.log(start_zahlwort, end_zahlwort);
+                    var final_red_array = zahlen_array.slice(zahlen_array.indexOf(start_zahlwort), zahlen_array.indexOf(end_zahlwort) + 1);
+                    //console.log(final_red_array);
+
+                    //var final_red_date = document.getElementById(document.getElementById("day").value)
+                    friggin_old_date = old_date_list[document.getElementById("day").value];
+
+                    document.getElementById("after_select").innerHTML = `
+                        <div>Ihre Unterrichtsstunde am ${day_digit[indexibexi] + ". " + month_word[indexibexi] + " " + year_digit[indexibexi]} beginnt um ${start_time_digits} und endet um ${end_time_digits}.
+                        </br>Dauer: ${dauer_h} h ${dauer_min} min
+                        </br>Preis: ${unt_preis.replace(/\./g, ',')} €</div>
+                        <form action="{% url 'store' %}" method="POST">
+                        {% csrf_token %}
+                        <select hidden name="day_humanized" id="day_humanized">
+                            <option hidden value="${day_digit[indexibexi] + ". " + month_word[indexibexi] + " " + year_digit[indexibexi]}"></option>
+                        </select>
+                        <select hidden name="hour_startforsystem_humanized" id="hour_startforsystem_humanized">
+                            <option hidden value="${String(Number(start_time_digits.slice(0, 2)) - 1) + ":" + start_time_digits.slice(3)}"></option>
+                        </select>
+                        <select hidden name="hour_start_humanized" id="hour_start_humanized">
+                            <option hidden value="${start_time_digits}"></option>
+                        </select>
+                        <select hidden name="hour_end_humanized" id="hour_end_humanized">
+                            <option hidden value="${end_time_digits}"></option>
+                        </select>
+                        <select hidden name="hour_endforsystem_humanized" id="hour_endforsystem_humanized">
+                            <option hidden value="${String(Number(end_time_digits.slice(0, 2)) + 1) + ":" + end_time_digits.slice(3)}"></option>
+                        </select>
+                        <select hidden name="dauer_h_humanized" id="dauer_h_humanized">
+                            <option hidden value="${dauer_h} h ${dauer_min} min"></option>
+                        </select>
+                        <select hidden name="unt_preis_humanized" id="unt_preis_humanized">
+                            <option hidden value="${unt_preis.replace(/\./g, ',')} €"></option>
+                        </select>
+                        <select hidden name="friggin_old_date" id="friggin_old_date">
+                            <option hidden value="${friggin_old_date}"></option>
+                        </select>
+                        <select hidden name="final_red_array" id="final_red_array">
+                            <option hidden value="${final_red_array}"></option>
+                        </select>
+                        </br><button type="submit">Submit</button>
+                        </form>
+                    `;
+                }
+            })
+        }
+    })();
+    
+
+
+    var hourEndSelect = (function(start_values) {
+        return function(start_values) {
+            document.getElementById("hour_start_select_id").addEventListener("change", function () {
+                document.getElementById("after_select").innerHTML ="";
+                var rel_green_end = arr[document.getElementById("day").value];
+                var arrayLength = rel_green_end.length;
+                var end_values = [];
+                for (var i = 0; i < arrayLength; i++) {
+                    end_values.push(rel_green_end[i][2]);
+                }
+
+                var start_time_number = Number(document.getElementById("hour_start_select_id").value);
+                var start_time_digits = start_values[start_time_number];
+                var end_values = end_values.slice(Number(start_time_number)+2);
+
+                var start_hour = Number(start_time_digits.slice(0, 2));
+                var start_minute = Number(start_time_digits.slice(3));
+                var arrayLength = end_values.length;
+                var end_hour = [];
+                var end_minute = [];
+
+                for (var i = 0; i < arrayLength; i++) {
+                    //console.log(end_values);
+                    end_hour.push(Number(end_values[i].slice(0, 2)));
+                    end_minute.push(Number(end_values[i].slice(3)));
+                }
+                
+                for (var i = 0; i <= arrayLength; i++) {
+                    var hour_diff = end_hour[i+1] - end_hour[i];
+                    var minute_diff = end_minute[i+1] - end_minute[i];
+                    if (hour_diff == 0) {
+                        if (minute_diff == 15) {
+                            //pass
+                        } else {
+                            end_values = end_values.slice(0, i+1);
+                        }
+                    } else {
+                        if (hour_diff == 1) {
+                            if (minute_diff == -45) {
+                                // pass
+                            } else {
+                                end_values = end_values.slice(0, i+1);
+                            }
+                        } else {
+                            end_values = end_values.slice(0, i+1);
+                        }
+                    }
+                    set_alert = false;
+                    if ((end_hour[0] - start_hour) == 1) {
+                        if ((end_minute[0] - start_minute == 0)) {
+                            end_values = [];
+                            set_alert = true;
+                        }
+                    }
+
+                    if ((end_hour[0] - start_hour) == 1) {
+                        if ((end_minute[0] - start_minute) == 15) {
+                            end_values = [];
+                            set_alert = true;
+                        }
+                    }
+
+                    if ((end_hour[0] - start_hour) == 1) {
+                        if ((end_minute[0] - start_minute == 30)) {
+                            end_values = [];
+                            set_alert = true;
+                        }
+                    }
+
+                    if ((end_hour[0] - start_hour) == 1) {
+                        if ((end_minute[0] - start_minute == 45)) {
+                            end_values = [];
+                            set_alert = true;
+                        }
+                    }
+
+                    if ((end_hour[0] - start_hour) > 1) {
+                        end_values = [];
+                        set_alert = true;
+                    }
+
+                    
+
+                    //var end_values = end_values.slice(Number(start_time_number)+2);
+                }
+                
+                array_length = end_values.length;
+                outputHTML = `
+                    <label for="hour_end">Bitte wählen Sie den Endzeitpunkt aus:</label>
+                        <select name="hour_end" id="hour_end_select_id">
+                            <option value=null>---</option>
+                `;
+
+                for (var i = 0; i < arrayLength; i++) {
+                    if (end_values[i] === undefined) {
+                        end_values.slice(0, i);
+                    }
+                }
+
+                arrayLength = end_values.length;
+
+                for (var i = 0; i < arrayLength; i++) {                    
+                    outputHTML += `<option value="${end_values[i]}">${end_values[i]}</option>`;                    
+                }
+
+                outputHTML += `</select><p>(Mindestdauer 45 Minuten)</p>`;
+                document.getElementById("hour_end").innerHTML = outputHTML;
+                
+                if (set_alert == true) {
+                    alert("Leider unterschreitet der verfügbare Slot die Mindestdauer von 45 Minuten oder Sie haben einen zu späten Startzeitpunkt gewählt. Bitte wählen Sie einen anderen verfügbaren Slot oder einen früheren Startzeitpunkt.");
+                }
+
+                afterSelect(start_values, day_digit, month_word, year_digit, old_date_list);
+            });
+        }
+    })();
+
+
+</script>
+
+</html>

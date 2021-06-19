@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Results</title>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <!--<div id="results">
+        <p>Tag: {{ day_humanized }}</p>
+        <p>Startzeitpunkt: {{ hour_start_humanized }}</p>
+        <p>Endzeitpunkt: {{ hour_end_humanized }}</p>
+        <p>Dauer: {{ dauer_h_humanized }}</p>
+        <p>Grundpreis: {{ unt_preis_humanized }}</p>
+        <p>Gesamtpreis: {{ gesamtpreis_humanized }}</p>
+        <p>Art des Treffens: {{ møtemåte }}</p>
+        <p>Lerntyp: {{ læremåte }}</p>
+        <p>Niveau: {{ kunnskapsnivå }}</p>
+        <p>Maske: {{ munnbind }}</p>
+        <p>Selbsttest: {{ selbsttest }}</p>
+        <p>Videocallanbieter: {{ videocall }}</p>
+    </div>-->
+
+    <div class="row">
+        <div class="col-lg-4 block-border">
+            <form action="send_mail_plain_with_stored_file/" method="post" enctype='multipart/form-data' id='payment-form'>
+                {% csrf_token %}
+                <!--<div class="form-group">
+                    <label class="control-label">
+                        Email :
+                    </label>
+                    <input type="text" name="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">
+                        Subject :
+                    </label>
+                    <input type="text" name="subject" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">
+                        Message :
+                    </label>
+                    <textarea name="message" class="form-control" rows="5"></textarea>
+                </div>-->
+                <select hidden name="day_humanized" id="day_humanized">
+                    <option hidden value="{{ day_humanized }}">{{ day_humanized }}</option>
+                </select>
+                <select hidden name="hour_start_humanized" id="hour_start_humanized">
+                    <option hidden value="{{ hour_start_humanized }}">{{ hour_start_humanized }}</option>
+                </select>
+                <select hidden name="hour_end_humanized" id="hour_end_humanized">
+                    <option hidden value="{{ hour_end_humanized }}">{{ hour_end_humanized }}</option>
+                </select>
+                <select hidden name="dauer_h_humanized" id="dauer_h_humanized">
+                    <option hidden value="{{ dauer_h_humanized }}">{{ dauer_h_humanized }}</option>
+                </select>
+                <select hidden name="unt_preis_humanized" id="unt_preis_humanized">
+                    <option hidden value="{{ unt_preis_humanized }}">{{ unt_preis_humanized }}</option>
+                </select>
+                <select hidden name="gesamtpreis_humanized" id="gesamtpreis_humanized">
+                    <option hidden value="{{ gesamtpreis_humanized }}">{{ gesamtpreis_humanized }}</option>
+                </select>
+                <select hidden name="day_humanized" id="day_humanized">
+                    <option hidden value="{{ day_humanized }}">{{ day_humanized }}</option>
+                </select>
+                <select hidden name="møtemåte" id="møtemåte">
+                    <option hidden value="{{ møtemåte }}">{{ møtemåte }}</option>
+                </select>
+                <select hidden name="læremåte" id="læremåte">
+                    <option hidden value="{{ læremåte }}">{{ læremåte }}</option>
+                </select>
+                <select hidden name="kunnskapsnivå" id="kunnskapsnivå">
+                    <option hidden value="{{ kunnskapsnivå }}">{{ kunnskapsnivå }}</option>
+                </select>
+                <select hidden name="munnbind" id="munnbind">
+                    <option hidden value="{{ munnbind }}">{{ munnbind }}</option>
+                </select>
+                <select hidden name="selbsttest" id="selbsttest">
+                    <option hidden value="{{ selbsttest }}">{{ selbsttest }}</option>
+                </select>
+                <select hidden name="videocall" id="videocall">
+                    <option hidden value="{{ videocall }}">{{ videocall }}</option>
+                </select>
+                <select hidden name="friggin_old_date" id="friggin_old_date">
+                    <option hidden value="{{ friggin_old_date }}">{{ friggin_old_date }}</option>
+                </select>
+                <select hidden name="final_red_array" id="final_red_array">
+                    <option hidden value="{{ final_red_array }}">{{ final_red_array }}</option>
+                </select>
+                <select hidden name="kunde_adr_1" id="kunde_adr_1">
+                    <option hidden value="{{ kunde_adr_1 }}">{{ kunde_adr_1 }}</option>
+                </select>
+                <select hidden name="kunde_adr_2" id="kunde_adr_2">
+                    <option hidden value="{{ kunde_adr_2 }}">{{ kunde_adr_2 }}</option>
+                </select>
+
+                <div class="form-row">
+                    <label for="card-element">
+                        Credit or debit card
+                    </label>
+                    <div id="card-element">
+                        <!-- A Stripe Element will be inserted here. -->
+                    </div>
+        
+                    <!-- Used to display form errors. -->
+                    <div id="card-errors" role="alert"></div>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Pay</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <a href="/">Back to Form</a>
+    <script>
+        var stripe = Stripe('pk_test_51IzkfCGbhvTsDgfjPVgXcLn56jsWmKiJCTfuTftgdYIJetPci1SXezrebASzi30lEW2AYX6u4F0I39TCU1ZwnU0v00wXa2qfVR');
+
+        //Create an instance of Elements.
+        var elements = stripe.elements();
+
+        //Custom styling can be passed to options when creating an Element.
+        //(Note that this demo uses a wider set of style than the guide below.)
+        var style = {
+            base: {
+                color: '#32325d',
+                fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                fontSmoothing: 'antialiased',
+                fontSize: '16px',
+                '::placeholder': {
+                    color: '#aab7c4'
+                }
+            },
+            invalid: {
+                color: '#fa755a',
+                iconColor: '#fa755a'
+            }
+        };
+
+        //Create an instance of the card Element.
+        var card = elements.create('card', {style: style});
+
+        //Add an instance of the card Element into the 'card-element' <div>.
+        card.mount('#card-element');
+
+        //Handle real-time validation errors from the card Element.
+        card.addEventListener('change', function(event) {
+            var displayError = document.getElementById('card-errors');
+            if (event.error) {
+                display.Error.textContent = event.error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
+
+        //Handle form submission.
+        var form = document.getElementById('payment-form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            stripe.createToken(card).then(function(result) {
+                if (result.error) {
+                    //Inform the user if there was an error.
+                    var errorElement = document.getElementById('card-errors');
+                    errorElement.textContent = result.error.message;
+                } else {
+                    //Send the token to your server.
+                    stripeTokenHandler(result.token);
+                }
+            });
+        });
+
+        //Submit the form with the token ID.
+        function stripeTokenHandler(token) {
+            //Insert the token ID into the form so it gets submitted to the server
+            var form = document.getElementById('payment-form');
+            var hiddenInput = document.createElement('input');
+            hiddenInput.setAttribute('type', 'hidden');
+            hiddenInput.setAttribute('name', 'stripeToken');
+            hiddenInput.setAttribute('value', token.id);
+            form.appendChild(hiddenInput);
+
+            //Submit the form
+            form.submit();
+        }
+    </script>
+</body>
+</html>

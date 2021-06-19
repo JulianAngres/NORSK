@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <p style='text-align: right;'>
+            Julian Angres<br>
+            Düppeler Str. 14<br>
+            81929 München<br>
+            Email: ja@julian-angres.no<br>
+            Ust-IDNr.: 65 082 493 879
+        </p>
+        <p>
+            {{ kundenavn }}<br>
+            {{ kunde_adr_1 }}<br>
+            {{ kunde_adr_2 }}<br>
+            {{ kunde_email }}
+        </p>
+        <h1>Rechnungsnr.: {{ rechnungsnr }}             Ausstellungsdatum: {{ rechnungsdatum }}</h1><br><br><br>
+        <p>
+            Hei,<br>
+            hier ist die Rechnung für deine Unterrichtsstunde bei mir: <br><br><br>
+            Datum: <strong>{{ day_humanized }}</strong><br>  Beginn: <strong>{{ hour_start_humanized }}</strong> <br> Ende: <strong>{{ hour_end_humanized }}</strong> <br> Dauer: <strong>{{ dauer_h_humanized }}</strong> <br> Art des Treffens: <strong>{{ møtemåte }}</strong>
+        </p><br><br><br><hr>
+        <p>
+            Grundpreis: {{ unt_preis_humanized }}
+            <br><br>
+            Gesamtpreis (inkl. ggf. Anfahrt/Hygienemaßnahmen): <div id="gesamtpreis"><strong>{{ gesamtpreis_humanized }} €</strong></div>
+        </p><hr><br><br>
+        Nach § 19 UStG sind meine Dienstleistungen umsatzsteuerbefreit. <br><br>
+        Vielen Dank für deine Buchung und bis bald! <br><br><br><br><br>
+        Julian Angres
+    </body>
+
+
+</html>
