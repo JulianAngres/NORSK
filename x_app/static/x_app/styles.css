@@ -1,0 +1,31 @@
+.d1{background:red}
+.d2{background:white}
+.d3{background:darkblue}
+.d4{background:lightgray}
+
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+
+
+.container {
+    height: 100%;
+    width: 100%;
+    background:lightgray;
+    display: grid;
+    grid-template-columns: 1fr 20px 20px 70% 20px 20px 1fr;
+}
+
+#font {
+    font-family: nixieone;
+    font-size: 20px;
+}
+
+@font-face {
+    src: url(fonts/NixieOne-Regular.ttf);
+    font-family: nixieone;
+}
